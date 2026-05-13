@@ -1,0 +1,2800 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Theme bootstrap — apply before paint to avoid flash -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("max-theme");
+          var prefersDark = window.matchMedia(
+            "(prefers-color-scheme: dark)",
+          ).matches;
+          var theme = stored || (prefersDark ? "dark" : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+
+    <!-- Primary SEO -->
+    <title>
+      Max Monitoramento | Portaria Remota Inteligente e Segurança 24h
+    </title>
+    <meta
+      name="description"
+      content="Segurança eletrônica de ponta para condomínios e empresas. Portaria remota com IA, monitoramento 24h, câmeras de alta resolução e redução de até 50% nos custos fixos. +15.000 clientes."
+    />
+    <meta
+      name="keywords"
+      content="portaria remota, monitoramento 24h, segurança eletrônica, condomínio, câmeras de segurança, alarme monitorado, Max Monitoramento"
+    />
+    <meta name="author" content="Max Monitoramento" />
+    <meta name="theme-color" content="#0A2540" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta
+      property="og:title"
+      content="Max Monitoramento | Portaria Remota Inteligente e Segurança 24h"
+    />
+    <meta
+      property="og:description"
+      content="A evolução da proteção para o seu condomínio. Inteligência humana + IA para segurança total."
+    />
+    <meta property="og:url" content="https://maxmonitoramento.com.br/" />
+    <meta property="og:image" content="images/og-cover.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Max Monitoramento | Portaria Remota Inteligente"
+    />
+    <meta
+      name="twitter:description"
+      content="Segurança 24h, IA e equipe especializada. Reduza custos e eleve a proteção do seu condomínio."
+    />
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fonts: Sora (display) + Plus Jakarta Sans (body) — distinctive, modern, premium -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/variables.css?v=3" />
+    <link rel="stylesheet" href="css/base.css?v=3" />
+    <link rel="stylesheet" href="css/components.css?v=3" />
+    <link rel="stylesheet" href="css/sections.css?v=3" />
+    <link rel="stylesheet" href="css/animations.css?v=3" />
+    <link rel="stylesheet" href="css/responsive.css?v=3" />
+    <link rel="stylesheet" href="css/svg-sizing.css?v=3" />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Max Monitoramento",
+        "url": "https://maxmonitoramento.com.br/",
+        "logo": "images/logo.png",
+        "description": "Segurança eletrônica, portaria remota e monitoramento 24h para condomínios, residências e empresas.",
+        "address": { "@type": "PostalAddress", "addressCountry": "BR" },
+        "sameAs": []
+      }
+    </script>
+  </head>
+  <body>
+    <!-- ============================================ -->
+    <!-- HEADER / NAVIGATION                           -->
+    <!-- ============================================ -->
+    <header class="header" id="header">
+      <div class="container header__container">
+        <a href="#hero" class="header__logo" aria-label="Max Monitoramento">
+          <div class="logo">
+            <div class="logo__mark" aria-hidden="true">
+              <img
+                src="images/logo.png"
+                alt="Max Monitoramento Logo"
+                style="height: 36px; width: auto; display: block"
+              />
+            </div>
+            <div class="logo__text">
+              <span class="logo__name">MAX</span>
+              <span class="logo__sub">Monitoramento</span>
+            </div>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Principal">
+          <ul class="nav__list">
+            <li><a href="#sobre" class="nav__link">Sobre</a></li>
+            <li><a href="#servicos" class="nav__link">Serviços</a></li>
+            <li><a href="#aplicativos" class="nav__link">Apps</a></li>
+            <li><a href="#depoimentos" class="nav__link">Depoimentos</a></li>
+            <li><a href="#faq" class="nav__link">FAQ</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Alternar tema"
+            type="button"
+          >
+            <svg
+              class="theme-toggle__sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+              />
+            </svg>
+            <svg
+              class="theme-toggle__moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </button>
+          <a
+            href="#contato"
+            class="btn btn--primary btn--sm"
+            data-cta="header-cta"
+          >
+            Fale com um especialista
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </a>
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <ul class="mobile-menu__list">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#aplicativos">Apps</a></li>
+          <li><a href="#processo">Como funciona</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li>
+            <a
+              href="#contato"
+              class="btn btn--primary btn--full"
+              data-cta="mobile-menu-cta"
+              >Fale com um especialista</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============================================ -->
+      <!-- HERO SECTION                                  -->
+      <!-- ============================================ -->
+      <section class="hero" id="hero">
+        <!-- Decorative background — photo + gradients -->
+        <div class="hero__backdrop" aria-hidden="true">
+          <div class="hero__photo"></div>
+          <div class="hero__gradient"></div>
+          <div class="hero__glow hero__glow--1"></div>
+          <div class="hero__glow hero__glow--2"></div>
+        </div>
+
+        <div class="container hero__container">
+          <div class="hero__content">
+            <div class="badge badge--hero animate-in" data-anim-delay="0">
+              <span class="badge__pulse" aria-hidden="true"></span>
+              Tecnologia de ponta em segurança 24h
+            </div>
+
+            <h1 class="hero__title animate-in" data-anim-delay="100">
+              <span class="text-gradient--display">Proteção sem limites</span>
+              <br />para o seu condomínio.
+            </h1>
+
+            <p class="hero__subtitle animate-in" data-anim-delay="200">
+              Portaria remota com inteligência artificial, monitoramento 24h e
+              gestão centralizada de acesso. Reduza até
+              <strong>50% dos custos fixos</strong>
+            </p>
+
+            <div class="hero__cta animate-in" data-anim-delay="300">
+              <a
+                href="#contato"
+                class="btn btn--primary btn--lg"
+                data-cta="hero-primary"
+              >
+                Quero proteger meu condomínio
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a
+                href="#processo"
+                class="btn btn--ghost btn--lg"
+                data-cta="hero-secondary"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3" />
+                </svg>
+                Como funciona
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a
+          href="#problema"
+          class="hero__scroll"
+          aria-label="Rolar para a próxima seção"
+        >
+          <span></span>
+        </a>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- CLIENTS / INTELBRAS / CERTIFICATIONS          -->
+      <!-- ============================================ -->
+      <section class="section section--compact clients" id="clientes">
+        <div class="container">
+          <header
+            class="section__header section__header--center section__header--compact"
+          >
+            <span class="eyebrow">
+              <span class="eyebrow__dot"></span>
+              Confiam em nós
+            </span>
+            <h2 class="section__title section__title--sm">
+              Mais de <span class="text-gradient">15.000</span> clientes
+              protegidos.
+            </h2>
+            <p class="section__lead">
+              De residências e comércios a grandes empresas e condomínios — a
+              segurança que você precisa, com a tecnologia que você merece.
+            </p>
+          </header>
+
+          <div class="clients__marquee" aria-hidden="false">
+            <div class="clients__track">
+              <!-- Set 1 (visível) -->
+              <div class="client-logo">
+                <img src="images/Allianz.png" alt="Allianz" loading="lazy" />
+              </div>
+              <div class="client-logo">
+                <img
+                  src="images/SulAmerica.png"
+                  alt="SulAmérica"
+                  loading="lazy"
+                />
+              </div>
+              <div class="client-logo">
+                <img src="images/Eskala.png" alt="Eskala" loading="lazy" />
+              </div>
+              <div class="client-logo">
+                <img src="images/CADPLAST.png" alt="CADPLAST" loading="lazy" />
+              </div>
+              <div class="client-logo">
+                <img
+                  src="images/Colegio.png"
+                  alt="Colégio Oriana SOOR"
+                  loading="lazy"
+                />
+              </div>
+              <div class="client-logo">
+                <img src="images/Barbara.png" alt="Barbara" loading="lazy" />
+              </div>
+              <div class="client-logo">
+                <img src="images/IBL.png" alt="IBL Logística" loading="lazy" />
+              </div>
+              <div class="client-logo">
+                <img
+                  src="images/Jardim.png"
+                  alt="Jardim Elétrico"
+                  loading="lazy"
+                />
+              </div>
+              <div class="client-logo">
+                <img src="images/FlyFilms.png" alt="Fly Films" loading="lazy" />
+              </div>
+              <div class="client-logo">
+                <img src="images/Adecol.png" alt="Adecol" loading="lazy" />
+              </div>
+
+              <!-- Set 2 (cópia para loop perfeito — aria-hidden para acessibilidade) -->
+              <div class="client-logo" aria-hidden="true">
+                <img src="images/Allianz.png" alt="" loading="lazy" />
+              </div>
+              <div class="client-logo" aria-hidden="true">
+                <img src="images/SulAmerica.png" alt="" loading="lazy" />
+              </div>
+              <div class="client-logo" aria-hidden="true">
+                <img src="images/Eskala.png" alt="" loading="lazy" />
+              </div>
+              <div class="client-logo" aria-hidden="true">
+                <img src="images/CADPLAST.png" alt="" loading="lazy" />
+              </div>
+              <div class="client-logo" aria-hidden="true">
+                <img src="images/Colegio.png" alt="" loading="lazy" />
+              </div>
+              <div class="client-logo" aria-hidden="true">
+                <img src="images/Barbara.png" alt="" loading="lazy" />
+              </div>
+              <div class="client-logo" aria-hidden="true">
+                <img src="images/IBL.png" alt="" loading="lazy" />
+              </div>
+              <div class="client-logo" aria-hidden="true">
+                <img src="images/Jardim.png" alt="" loading="lazy" />
+              </div>
+              <div class="client-logo" aria-hidden="true">
+                <img src="images/FlyFilms.png" alt="" loading="lazy" />
+              </div>
+              <div class="client-logo" aria-hidden="true">
+                <img src="images/Adecol.png" alt="" loading="lazy" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Intelbras featured partnership banner -->
+          <div class="intelbras-feature">
+            <div class="intelbras-feature__badge">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <polyline points="9 12 11 14 15 10" />
+              </svg>
+            </div>
+            <div class="intelbras-feature__content">
+              <span class="intelbras-feature__label">Parceria oficial</span>
+              <h3 class="intelbras-feature__title">
+                Empresa credenciada <strong>Intelbras</strong>
+              </h3>
+              <p class="intelbras-feature__desc">
+                Trabalhamos com a linha completa Intelbras — referência nacional
+                em equipamentos de segurança eletrônica. Projeto técnico,
+                instalação e suporte feitos por equipe certificada pelo
+                fabricante.
+              </p>
+            </div>
+            <div class="intelbras-feature__stamp" aria-hidden="true">
+              <small>Parceiro credenciado</small>
+              <span>INTELBRAS</span>
+            </div>
+          </div>
+
+          <!-- Certifications strip -->
+          <div class="certifications">
+            <div class="cert-badge">
+              <div class="cert-badge__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <div class="cert-badge__content">
+                <span class="cert-badge__label">Associada</span>
+                <span class="cert-badge__value">ABESE</span>
+              </div>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-badge__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+              <div class="cert-badge__content">
+                <span class="cert-badge__label">Credenciada</span>
+                <span class="cert-badge__value">Intelbras</span>
+              </div>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-badge__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="8" r="6" />
+                  <path d="M15.5 13.5L17 22l-5-3-5 3 1.5-8.5" />
+                </svg>
+              </div>
+              <div class="cert-badge__content">
+                <span class="cert-badge__label">Certificação</span>
+                <span class="cert-badge__value">ISO 9001</span>
+              </div>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-badge__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
+              </div>
+              <div class="cert-badge__content">
+                <span class="cert-badge__label">Conformidade</span>
+                <span class="cert-badge__value">LGPD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- PROBLEM SECTION ("O Cenário Atual")          -->
+      <!-- ============================================ -->
+      <section class="section problem" id="problema">
+        <div class="container">
+          <div class="problem__grid">
+            <div class="problem__content">
+              <span class="eyebrow eyebrow--danger">
+                <span class="eyebrow__dot"></span>
+                O cenário atual
+              </span>
+              <h2 class="section__title">
+                Segundos que mudam vidas:
+                <span class="text-danger">a vulnerabilidade</span>
+                das portarias convencionais.
+              </h2>
+              <p class="section__lead">
+                Criminosos utilizam técnicas simples — como travar a porta com
+                um objeto — para impedir o fechamento magnético completo.
+                Sistemas mal configurados interpretam que a porta está
+                "encostada" e <strong>não disparam o alerta</strong>, permitindo
+                o acesso livre.
+              </p>
+              <ul class="problem__list">
+                <li>
+                  <div class="problem__list-icon" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="12" y1="8" x2="12" y2="12" />
+                      <line x1="12" y1="16" x2="12.01" y2="16" />
+                    </svg>
+                  </div>
+                  <div>
+                    <strong>Falhas em sensores convencionais</strong>
+                    <p>Portas semi-abertas não geram alerta de intrusão.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="problem__list-icon" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="12" y1="8" x2="12" y2="12" />
+                      <line x1="12" y1="16" x2="12.01" y2="16" />
+                    </svg>
+                  </div>
+                  <div>
+                    <strong>Risco de rendição do porteiro físico</strong>
+                    <p>Operação humana exposta diretamente à ameaça.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="problem__list-icon" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="12" y1="8" x2="12" y2="12" />
+                      <line x1="12" y1="16" x2="12.01" y2="16" />
+                    </svg>
+                  </div>
+                  <div>
+                    <strong>Falta de auditoria de acessos</strong>
+                    <p>
+                      Sem registro confiável de quem entrou, quando e por quê.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="problem__media">
+              <div class="problem__media-frame">
+                <img
+                  src="images/Captura de tela 2026-05-12 222143.png"
+                  alt="Cenário real de segurança"
+                  loading="lazy"
+                />
+              </div>
+              <div class="problem__media-badge">
+                <span class="badge__pulse badge__pulse--danger"></span>
+                Segurança ativa
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- BENEFITS SECTION ("Controle total")           -->
+      <!-- ============================================ -->
+      <section class="section benefits" id="beneficios">
+        <div class="container">
+          <header class="section__header section__header--center">
+            <span class="eyebrow">
+              <span class="eyebrow__dot"></span>
+              Nossos diferenciais
+            </span>
+            <h2 class="section__title">
+              Por que a Max é a
+              <span class="text-gradient">escolha certa</span>.
+            </h2>
+            <p class="section__lead">
+              Tecnologia de ponta, equipe especializada e processos validados —
+              protegendo residências, comércios e condomínios em todo o Brasil.
+            </p>
+          </header>
+
+          <div class="benefits__grid">
+            <article class="benefit-card benefit-card--featured">
+              <div class="benefit-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 2a3 3 0 0 0-3 3v2a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"
+                  />
+                  <path
+                    d="M5 10a7 7 0 0 1 14 0v6a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-6z"
+                  />
+                  <line x1="12" y1="22" x2="12" y2="19" />
+                </svg>
+              </div>
+              <h3 class="benefit-card__title">
+                Contato imediato em casos de disparo
+              </h3>
+              <p class="benefit-card__desc">
+                Quando o alarme dispara, nossa central entra em contato imediato
+                com o cliente e toma as providências do plano contratado.
+              </p>
+              <ul class="benefit-card__list">
+                <li>Resposta em menos de 60 segundos</li>
+                <li>Operadores treinados 24/7</li>
+                <li>Protocolos validados pela ABESE</li>
+              </ul>
+            </article>
+
+            <article class="benefit-card">
+              <div class="benefit-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="11" width="18" height="10" rx="2" />
+                  <circle cx="7" cy="16" r="2" />
+                  <circle cx="17" cy="16" r="2" />
+                  <path d="M5 11V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3" />
+                </svg>
+              </div>
+              <h3 class="benefit-card__title">Acionamento da Polícia</h3>
+              <p class="benefit-card__desc">
+                Em caso de situação de intrusão confirmada, avisaremos
+                imediatamente à <strong>Polícia</strong>, garantindo a atuação
+                mais rápida possível.
+              </p>
+            </article>
+
+            <article class="benefit-card">
+              <div class="benefit-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="2" y="6" width="14" height="12" rx="2" />
+                  <polygon points="22 8 16 12 22 16 22 8" />
+                </svg>
+              </div>
+              <h3 class="benefit-card__title">
+                Central acessa as imagens em tempo real
+              </h3>
+              <p class="benefit-card__desc">
+                Nossa central acessa as câmeras em tempo real, conseguindo
+                identificar com precisão o motivo do disparo.
+              </p>
+            </article>
+
+            <article class="benefit-card">
+              <div class="benefit-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="6" cy="17" r="3" />
+                  <circle cx="18" cy="17" r="3" />
+                  <path d="M9 17h6M6 14V8a1 1 0 0 1 1-1h5l3 4 3 1v5" />
+                </svg>
+              </div>
+              <h3 class="benefit-card__title">Ronda motorizada</h3>
+              <p class="benefit-card__desc">
+                Envio de equipe tática motorizada para verificar in loco o
+                motivo do disparo, com tempo de chegada otimizado.
+              </p>
+            </article>
+
+            <article class="benefit-card">
+              <div class="benefit-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                  />
+                </svg>
+              </div>
+              <h3 class="benefit-card__title">Serviço técnico especializado</h3>
+              <p class="benefit-card__desc">
+                Equipe técnica certificada Intelbras, sem terceirização.
+                Instalação imediata, sem obras, com sistema totalmente sem fios.
+              </p>
+            </article>
+          </div>
+
+          <!-- Equipment showcase — 3 cards -->
+          <div class="equipment-showcase">
+            <header class="equipment-showcase__header">
+              <span class="equipment-showcase__eyebrow"
+                >Nossos equipamentos</span
+              >
+              <h3 class="equipment-showcase__title">
+                Tecnologia
+                <span class="text-gradient">homologada Intelbras</span>
+              </h3>
+              <p class="equipment-showcase__lead">
+                Trabalhamos com a linha completa de equipamentos de alta
+                performance — projetados para máxima eficiência e durabilidade.
+              </p>
+            </header>
+            <div class="equipment-grid">
+              <article class="equipment-card">
+                <div class="equipment-card__media">
+                  <img
+                    src="images/ChatGPT Image 13 de mai. de 2026, 13_28_07.png"
+                    alt="Câmera de monitoramento Intelbras"
+                    loading="lazy"
+                  />
+                  <div class="equipment-card__badge">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <circle cx="12" cy="12" r="3" />
+                      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="equipment-card__content">
+                  <h4 class="equipment-card__title">
+                    Câmeras HD &amp; Full HD
+                  </h4>
+                  <p class="equipment-card__desc">
+                    Câmeras IP de alta resolução com visão noturna, detecção de
+                    movimento e transmissão em tempo real.
+                  </p>
+                  <span class="equipment-card__tag">Linha Intelbras</span>
+                </div>
+              </article>
+              <article class="equipment-card">
+                <div class="equipment-card__media">
+                  <img
+                    src="images/Captura de tela 2026-05-13 123256.png"
+                    alt="Central de alarme monitorada"
+                    loading="lazy"
+                  />
+                  <div class="equipment-card__badge">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="equipment-card__content">
+                  <h4 class="equipment-card__title">Centrais de alarme</h4>
+                  <p class="equipment-card__desc">
+                    Sistemas de alarme sem fio com sensores inteligentes,
+                    integração mobile e comunicação 24h com a central.
+                  </p>
+                  <span class="equipment-card__tag">Monitoramento 24h</span>
+                </div>
+              </article>
+              <article class="equipment-card">
+                <div class="equipment-card__media">
+                  <img
+                    src="images/Gemini_Generated_Image_bppfdpbppfdpbppf.png"
+                    alt="Controle de acesso e portaria remota"
+                    loading="lazy"
+                  />
+                  <div class="equipment-card__badge">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="equipment-card__content">
+                  <h4 class="equipment-card__title">Nossos equipamentos</h4>
+                  <p class="equipment-card__desc">
+                    Leitores biométricos, tags RFID, interfones IP e
+                    dispositivos de portaria remota integrados ao seu
+                    condomínio.
+                  </p>
+                  <span class="equipment-card__tag">Portaria Remota</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- ABOUT SECTION ("Quem é Max Monitoramento")    -->
+      <!-- ============================================ -->
+      <section class="section about" id="sobre">
+        <div class="about__backdrop" aria-hidden="true"></div>
+        <div class="container">
+          <div class="about__grid">
+            <div class="about__intro">
+              <span class="eyebrow eyebrow--light">
+                <span class="eyebrow__dot"></span>
+                Sobre a Max Monitoramento
+              </span>
+              <h2 class="section__title section__title--light">
+                Mais de duas décadas protegendo o que
+                <span class="text-gradient-light">importa</span>.
+              </h2>
+              <p class="section__lead section__lead--light">
+                A Max Monitoramento iniciou suas atividades nos anos 2000,
+                devido a uma grande demanda da segurança eletrônica. Ao longo
+                deste período adquirimos uma
+                <strong>vasta experiência na área</strong>, atendendo clientes a
+                nível nacional.
+              </p>
+              <p
+                class="section__lead section__lead--light"
+                style="margin-top: 1rem"
+              >
+                Contamos com uma
+                <strong
+                  >grande estrutura de monitoramento, central própria</strong
+                >
+                e equipamentos de ponta com redundância em energia elétrica,
+                internet e servidores. Formada por uma equipe de profissionais
+                com formação multidisciplinar atuando na área de Monitoramento e
+                Tecnologia da Segurança.
+              </p>
+              <a
+                href="#contato"
+                class="btn btn--white btn--lg"
+                data-cta="about-cta"
+              >
+                Fale conosco
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+
+            <div class="about__pillars">
+              <article class="pillar">
+                <div class="pillar__number">01</div>
+                <h3 class="pillar__title">Central de monitoramento própria</h3>
+                <p class="pillar__desc">
+                  Estrutura robusta com redundância em energia elétrica,
+                  internet e servidores — operação ininterrupta, sem
+                  terceirização.
+                </p>
+              </article>
+              <article class="pillar">
+                <div class="pillar__number">02</div>
+                <h3 class="pillar__title">Equipe técnica multidisciplinar</h3>
+                <p class="pillar__desc">
+                  Profissionais especializados em Monitoramento e Tecnologia da
+                  Segurança, com formação contínua e protocolos validados.
+                </p>
+              </article>
+              <article class="pillar">
+                <div class="pillar__number">03</div>
+                <h3 class="pillar__title">Atendimento nível nacional</h3>
+                <p class="pillar__desc">
+                  Mais de 15.000 clientes atendidos em todo o Brasil, com tempo
+                  de resposta de menos de 60 segundos em emergências.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <!-- Stats strip -->
+          <div class="about__stats">
+            <div class="stat">
+              <div class="stat__value" data-counter="15000" data-suffix="+">
+                0
+              </div>
+              <div class="stat__label">Clientes atendidos</div>
+            </div>
+            <div class="stat">
+              <div class="stat__value" data-counter="25" data-suffix="+">0</div>
+              <div class="stat__label">Anos de mercado</div>
+            </div>
+            <div class="stat">
+              <div class="stat__value" data-counter="50" data-suffix="%">0</div>
+              <div class="stat__label">Redução de custos</div>
+            </div>
+            <div class="stat">
+              <div class="stat__value" data-counter="24" data-suffix="/7">
+                0
+              </div>
+              <div class="stat__label">Central ativa</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- SERVICES SECTION                              -->
+      <!-- ============================================ -->
+      <section class="section services" id="servicos">
+        <div class="container">
+          <header class="section__header section__header--center">
+            <span class="eyebrow">
+              <span class="eyebrow__dot"></span>
+              Nossos serviços
+            </span>
+            <h2 class="section__title">
+              Segurança inteligente <span class="text-gradient">+</span> gestão
+              de acesso.
+            </h2>
+            <p class="section__lead">
+              Tecnologia de ponta em monitoramento e portaria remota, com
+              soluções completas para todo perfil de cliente.
+            </p>
+          </header>
+
+          <div class="services__list">
+            <!-- Service 1 -->
+            <article class="service service--alt">
+              <div class="service__content">
+                <div class="service__tag">01 — Destaque</div>
+                <h3 class="service__title">Portaria Remota com IA</h3>
+                <p class="service__desc">
+                  Substituição inteligente do porteiro físico por uma central
+                  remota com reconhecimento facial, controle de acesso
+                  automatizado e operadores treinados para validar visitantes em
+                  tempo real.
+                </p>
+                <ul class="service__features">
+                  <li>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Reconhecimento facial e leitura de placas
+                  </li>
+                  <li>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Liberação por app, QR code ou interfone
+                  </li>
+                  <li>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Eliminação do risco de rendição
+                  </li>
+                </ul>
+                <a
+                  href="#contato"
+                  class="btn btn--primary"
+                  data-cta="service-portaria"
+                  >Saiba mais</a
+                >
+              </div>
+              <div class="service__visual">
+                <div class="placeholder placeholder--service">
+                  <img
+                    src="images/PortariaIA.png"
+                    alt="Portaria Remota com IA"
+                  />
+                </div>
+              </div>
+            </article>
+
+            <!-- Service 2 - Padronizado -->
+            <article class="service service--alt">
+              <div class="service__content">
+                <div class="service__tag">02</div>
+                <h3 class="service__title">
+                  Câmeras de monitoramento
+                  <span class="text-gradient">com gravação em nuvem</span>
+                </h3>
+                <p class="service__desc">
+                  Monitoramento perimetral e interno com câmeras IP
+                  <strong>Intelbras de alta definição</strong>. Toda gravação
+                  fica armazenada em nuvem segura — acesso a qualquer hora, de
+                  qualquer lugar, direto pelo aplicativo.
+                </p>
+                <div class="channels-grid">
+                  <div class="channel-tag">
+                    <span class="channel-tag__num">4</span><span>canais</span>
+                  </div>
+                  <div class="channel-tag">
+                    <span class="channel-tag__num">8</span><span>canais</span>
+                  </div>
+                  <div class="channel-tag">
+                    <span class="channel-tag__num">16</span><span>canais</span>
+                  </div>
+                  <div class="channel-tag">
+                    <span class="channel-tag__num">32</span><span>canais</span>
+                  </div>
+                </div>
+                <ul class="service__features">
+                  <li>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Visão noturna, alta resolução e detecção de movimento
+                  </li>
+                  <li>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Acesse a qualquer hora e local pelo celular
+                  </li>
+                  <li>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Compartilhe gravações e use linha do tempo inteligente
+                  </li>
+                  <li>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Sem necessidade de DVR físico para armazenamento extenso
+                  </li>
+                </ul>
+                <a
+                  href="#contato"
+                  class="btn btn--primary"
+                  data-cta="service-cameras"
+                >
+                  Saiba mais sobre câmeras
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14M13 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+              <div class="service__visual">
+                <div class="placeholder placeholder--service">
+                  <img src="images/Cameras.png" alt="Câmera HD + DVR" />
+                </div>
+              </div>
+            </article>
+
+            <!-- Service 3 -->
+            <article class="service service--alt">
+              <div class="service__content">
+                <div class="service__tag">03</div>
+                <h3 class="service__title">Alarme monitorado 24h</h3>
+                <p class="service__desc">
+                  Sistema de alarme sem fios, sem obras, com até 40% de
+                  desconto. Quando o alarme dispara, nossa central recebe o
+                  sinal e toma providência imediata — acionando a polícia em
+                  caso de intrusão confirmada.
+                </p>
+                <ul class="service__features">
+                  <li>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Instalação imediata e sem obras
+                  </li>
+                  <li>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Pânico no app e botão físico
+                  </li>
+                  <li>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Pagamento em até 10x sem juros
+                  </li>
+                </ul>
+                <a
+                  href="#contato"
+                  class="btn btn--primary"
+                  data-cta="service-alarme"
+                  >Saiba mais</a
+                >
+              </div>
+              <div class="service__visual">
+                <div class="placeholder placeholder--service">
+                  <img
+                    src="images/TabletMonitoramento.png"
+                    alt="Alarme Monitorado 24h"
+                  />
+                </div>
+              </div>
+            </article>
+
+            <!-- Service 4 -->
+            <article class="service service--alt">
+              <div class="service__content">
+                <div class="service__tag">04</div>
+                <h3 class="service__title">
+                  Smart Lockers &amp; controle de acesso
+                </h3>
+                <p class="service__desc">
+                  Armários eletrônicos para recebimento de encomendas com total
+                  segurança e sem contato físico — ideal para a rotina moderna
+                  dos moradores. Integração total com o app da Max.
+                </p>
+                <ul class="service__features">
+                  <li>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Liberação por código único
+                  </li>
+                  <li>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Notificação automática ao morador
+                  </li>
+                  <li>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Histórico completo de entregas
+                  </li>
+                </ul>
+                <a
+                  href="#contato"
+                  class="btn btn--ghost"
+                  data-cta="service-lockers"
+                  >Saiba mais</a
+                >
+              </div>
+              <div class="service__visual">
+                <div class="placeholder placeholder--service">
+                  <img src="images/Cameras2.png" alt="Smart Lockers" />
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- APPS SECTION                                  -->
+      <!-- ============================================ -->
+      <section class="section apps" id="aplicativos">
+        <div class="container">
+          <header class="section__header section__header--center">
+            <span class="eyebrow">
+              <span class="eyebrow__dot"></span>
+              Aplicativos exclusivos
+            </span>
+            <h2 class="section__title">
+              Toda a sua segurança na
+              <span class="text-gradient">palma da mão</span>.
+            </h2>
+            <p class="section__lead">
+              Dois aplicativos dedicados para Android e iOS. Controle alarme,
+              câmeras, portaria e acesso de visitantes de onde estiver — com
+              notificações em tempo real.
+            </p>
+          </header>
+
+          <div class="apps-unified">
+            <div class="apps-unified__content">
+              <div class="apps-unified__app">
+                <div
+                  class="apps-unified__icon apps-unified__icon--alarm"
+                  aria-hidden="true"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="apps-unified__title">App – Sistema de Alarmes</h3>
+                  <p class="apps-unified__desc">
+                    Arme/desarme remotamente, controle de acesso, gestão de
+                    chaves e solicitação de fotos — total praticidade no seu
+                    bolso.
+                  </p>
+                </div>
+              </div>
+
+              <div class="apps-unified__app">
+                <div
+                  class="apps-unified__icon apps-unified__icon--portaria"
+                  aria-hidden="true"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="apps-unified__title">App – Portaria Remota</h3>
+                  <p class="apps-unified__desc">
+                    Autorize visitantes, monitore em tempo real e gerencie seu
+                    condomínio inteiro com notificações instantâneas.
+                  </p>
+                </div>
+              </div>
+
+              <ul class="apps-unified__features">
+                <li>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Notificações em tempo real
+                </li>
+                <li>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Câmeras transmitidas ao vivo
+                </li>
+                <li>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Botão de pânico integrado
+                </li>
+                <li>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Convites de acesso para visitas
+                </li>
+              </ul>
+
+              <p class="apps-unified__availability">
+                Disponível para Android e iOS.
+              </p>
+
+              <div class="store-badges">
+                <a
+                  href="https://play.google.com/store"
+                  target="_blank"
+                  rel="noopener"
+                  class="store-badge-premium"
+                  data-cta="app-google"
+                  aria-label="Disponível no Google Play"
+                >
+                  <span class="store-badge-premium__icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        fill="#34A853"
+                        d="M12.954 11.616 15.911 8.66l-10.001-5.4a1.46 1.46 0 0 0-1.575.1l8.619 8.256z"
+                      />
+                      <path
+                        fill="#FBBC04"
+                        d="m17.498 9.523 1.99 1.085c1.092.598 1.092 2.18 0 2.778l-2.05 1.116-3.06-3.116 3.12-1.863z"
+                      />
+                      <path
+                        fill="#EA4335"
+                        d="m4.336 20.74 8.618-8.626L15.91 15.06l-9.97 5.408a1.466 1.466 0 0 1-1.605-.728z"
+                      />
+                      <path
+                        fill="#4285F4"
+                        d="M3.797 3.518a1.482 1.482 0 0 0-.529 1.129v14.708c0 .42.169.81.46 1.094l8.96-8.96L3.797 3.518z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="store-badge-premium__text">
+                    <small>DISPONÍVEL NO</small>
+                    <strong>Google Play</strong>
+                  </span>
+                </a>
+                <a
+                  href="https://apps.apple.com"
+                  target="_blank"
+                  rel="noopener"
+                  class="store-badge-premium"
+                  data-cta="app-apple"
+                  aria-label="Disponível na App Store"
+                >
+                  <span class="store-badge-premium__icon">
+                    <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+                      <path
+                        d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="store-badge-premium__text">
+                    <small>DISPONÍVEL NA</small>
+                    <strong>App Store</strong>
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            <div class="apps-unified__devices">
+              <!-- TABLET — Portaria Remota -->
+              <div class="device-tablet" aria-hidden="true">
+                <div class="device-tablet__camera"></div>
+                <div class="device-tablet__screen">
+                  <div class="device-tablet__statusbar">
+                    <span>14:32</span>
+                    <div class="device-tablet__indicators">
+                      <span class="signal-dot"></span
+                      ><span class="signal-dot"></span
+                      ><span class="signal-dot"></span
+                      ><span class="signal-dot"></span>
+                      <span class="battery"></span>
+                    </div>
+                  </div>
+                  <div class="device-tablet__header">
+                    <span class="device-tablet__title"
+                      >Condomínio · Bloco A</span
+                    >
+                    <span class="device-tablet__badge">● AO VIVO</span>
+                  </div>
+                  <div class="device-tablet__grid">
+                    <div class="cam-cell">
+                      <span>Portão Principal</span
+                      ><span class="cam-cell__rec">REC</span>
+                    </div>
+                    <div class="cam-cell">
+                      <span>Hall de Entrada</span
+                      ><span class="cam-cell__rec">REC</span>
+                    </div>
+                    <div class="cam-cell">
+                      <span>Garagem A1</span
+                      ><span class="cam-cell__rec">REC</span>
+                    </div>
+                    <div class="cam-cell">
+                      <span>Área Comum</span
+                      ><span class="cam-cell__rec">REC</span>
+                    </div>
+                  </div>
+                  <div class="device-tablet__actions">
+                    <button class="tablet-btn">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" /></svg
+                      >Moradores
+                    </button>
+                    <button class="tablet-btn tablet-btn--primary">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >Autorizar acesso
+                    </button>
+                    <button class="tablet-btn">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                        /></svg
+                      >Convites
+                    </button>
+                  </div>
+                </div>
+                <div class="device-tablet__home"></div>
+              </div>
+
+              <!-- PHONE — Sistema de Alarmes -->
+              <div class="device-phone" aria-hidden="true">
+                <div class="device-phone__notch"></div>
+                <div
+                  class="device-phone__sidebtn device-phone__sidebtn--top"
+                ></div>
+                <div
+                  class="device-phone__sidebtn device-phone__sidebtn--mid"
+                ></div>
+                <div class="device-phone__powerbtn"></div>
+                <div class="device-phone__screen">
+                  <div class="device-phone__statusbar">
+                    <span>09:47</span>
+                    <div class="device-phone__indicators">
+                      <span class="signal-dot"></span
+                      ><span class="signal-dot"></span
+                      ><span class="signal-dot"></span>
+                      <span class="battery battery--sm"></span>
+                    </div>
+                  </div>
+                  <div class="device-phone__greeting">
+                    <small>Bem-vindo,</small>
+                    <strong>Maria Souza</strong>
+                  </div>
+                  <div class="device-phone__status-card">
+                    <div class="status-card__icon">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        <polyline points="9 12 11 14 15 10" />
+                      </svg>
+                    </div>
+                    <div>
+                      <strong>Sistema ARMADO</strong>
+                      <span>8 sensores ativos · Residência</span>
+                    </div>
+                  </div>
+                  <div class="device-phone__quick-actions">
+                    <button class="qa-btn">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="3" y="11" width="18" height="10" rx="2" />
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg
+                      ><span>Armar</span>
+                    </button>
+                    <button class="qa-btn qa-btn--active">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="3" y="11" width="18" height="10" rx="2" />
+                        <circle cx="12" cy="16" r="1.5" /></svg
+                      ><span>Desarmar</span>
+                    </button>
+                    <button class="qa-btn qa-btn--danger">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="12" y1="8" x2="12" y2="12" />
+                        <line x1="12" y1="16" x2="12.01" y2="16" /></svg
+                      ><span>Pânico</span>
+                    </button>
+                  </div>
+                  <div class="device-phone__events">
+                    <h4>Últimos eventos</h4>
+                    <div class="event-row">
+                      <div class="event-row__dot event-row__dot--ok"></div>
+                      <div>
+                        <strong>Desarme bem-sucedido</strong
+                        ><span>Há 12 minutos</span>
+                      </div>
+                    </div>
+                    <div class="event-row">
+                      <div class="event-row__dot event-row__dot--info"></div>
+                      <div>
+                        <strong>Câmera 02 sincronizada</strong
+                        ><span>Há 1 hora</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="device-phone__homebar"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- PROCESS / HOW IT WORKS                        -->
+      <!-- ============================================ -->
+      <section class="section process" id="processo">
+        <div class="container">
+          <header class="section__header section__header--center">
+            <span class="eyebrow">
+              <span class="eyebrow__dot"></span>
+              Como funciona
+            </span>
+            <h2 class="section__title">
+              Do diagnóstico à
+              <span class="text-gradient">proteção total</span> em 4 passos.
+            </h2>
+            <p class="section__lead">
+              Um processo simples, transparente e ágil — pensado para você não
+              perder tempo.
+            </p>
+          </header>
+
+          <div class="process__timeline">
+            <div class="process__line" aria-hidden="true"></div>
+
+            <article class="process-step">
+              <div class="process-step__hex">01</div>
+              <h3 class="process-step__title">Diagnóstico gratuito</h3>
+              <p class="process-step__desc">
+                Visita técnica especializada para entender as vulnerabilidades e
+                necessidades do seu condomínio.
+              </p>
+            </article>
+
+            <article class="process-step">
+              <div class="process-step__hex">02</div>
+              <h3 class="process-step__title">Projeto personalizado</h3>
+              <p class="process-step__desc">
+                Solução sob medida com escolha de equipamentos, posicionamento e
+                integrações.
+              </p>
+            </article>
+
+            <article class="process-step">
+              <div class="process-step__hex">03</div>
+              <h3 class="process-step__title">Instalação imediata</h3>
+              <p class="process-step__desc">
+                Equipe técnica certificada Intelbras realiza a instalação sem
+                fios e sem obras.
+              </p>
+            </article>
+
+            <article class="process-step">
+              <div class="process-step__hex">04</div>
+              <h3 class="process-step__title">Monitoramento 24h</h3>
+              <p class="process-step__desc">
+                Sua segurança ativada na nossa central. Suporte permanente e
+                relatórios mensais.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- WHY INVEST NOW                                -->
+      <!-- ============================================ -->
+      <section class="section invest">
+        <div class="container">
+          <div class="invest__grid">
+            <div class="invest__list">
+              <article class="invest-card">
+                <span class="invest-card__num">01</span>
+                <p>Valorização do imóvel</p>
+              </article>
+              <article class="invest-card">
+                <span class="invest-card__num">02</span>
+                <p>Redução de conflitos internos e invasões</p>
+              </article>
+              <article class="invest-card">
+                <span class="invest-card__num">03</span>
+                <p>Auditoria completa de todos os eventos do condomínio</p>
+              </article>
+              <article class="invest-card">
+                <span class="invest-card__num">04</span>
+                <p>Eliminação do risco de rendição do porteiro físico</p>
+              </article>
+            </div>
+            <div class="invest__content">
+              <span class="eyebrow">
+                <span class="eyebrow__dot"></span>
+                Urgência inteligente
+              </span>
+              <h2 class="section__title">
+                Por que investir <span class="text-gradient">agora?</span>
+              </h2>
+              <p class="section__lead">
+                A tranquilidade da sua família
+                <strong>não pode esperar</strong>. Cada dia sem o sistema certo
+                é um dia exposto a vulnerabilidades evitáveis.
+              </p>
+              <p class="section__text">
+                Câmeras de alta resolução, smart lockers, portaria remota com IA
+                e auditoria completa — tudo integrado em um único ecossistema,
+                com suporte humano 24 horas.
+              </p>
+              <a
+                href="#contato"
+                class="btn btn--primary btn--lg"
+                data-cta="invest-cta"
+              >
+                Solicitar diagnóstico gratuito
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- TESTIMONIALS                                  -->
+      <!-- ============================================ -->
+      <section class="section testimonials" id="depoimentos">
+        <div class="container">
+          <header class="section__header section__header--center">
+            <span class="eyebrow">
+              <span class="eyebrow__dot"></span>
+              Depoimentos
+            </span>
+            <h2 class="section__title">
+              O que dizem nossos <span class="text-gradient">clientes</span>.
+            </h2>
+          </header>
+
+          <div class="testimonials__grid">
+            <!-- Depoimento 1 -->
+            <article class="testimonial">
+              <div class="testimonial__rating" aria-label="5 estrelas">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+              </div>
+              <p class="testimonial__text">
+                "Tínhamos muita preocupação com a entrada de pessoas não
+                autorizadas no condomínio. Desde que instalamos o sistema da
+                Max, o controle de acesso ficou muito mais rigoroso e os
+                moradores se sentem visivelmente mais tranquilos."
+              </p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar">MS</div>
+                <div>
+                  <p class="testimonial__name">Marina Silva</p>
+                  <p class="testimonial__role">
+                    Síndica — Condomínio Vila Nova
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Depoimento 2 (destaque) -->
+            <article class="testimonial testimonial--featured">
+              <div class="testimonial__rating" aria-label="5 estrelas">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+              </div>
+              <p class="testimonial__text">
+                "Instalamos o sistema de câmeras e o alarme monitorado na nossa
+                empresa há cerca de oito meses. O atendimento técnico foi
+                rápido, a instalação não gerou nenhuma interrupção nas operações
+                e, em um evento de disparo noturno, a central nos acionou em
+                menos de um minuto. Superou todas as expectativas."
+              </p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar">FF</div>
+                <div>
+                  <p class="testimonial__name">Flávio Farias</p>
+                  <p class="testimonial__role">
+                    Diretor de Operações — IBL Logística
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Depoimento 3 -->
+            <article class="testimonial">
+              <div class="testimonial__rating" aria-label="5 estrelas">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+              </div>
+              <p class="testimonial__text">
+                "O que me convenceu foi a visita técnica gratuita. O
+                profissional mapeou exatamente os pontos cegos que eu nem tinha
+                percebido. O sistema foi instalado em um único dia e funciona
+                perfeitamente desde então."
+              </p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar">PP</div>
+                <div>
+                  <p class="testimonial__name">Pablo Pereira</p>
+                  <p class="testimonial__role">
+                    Proprietário — Residência em São Paulo
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Depoimento 4 -->
+            <article class="testimonial">
+              <div class="testimonial__rating" aria-label="5 estrelas">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+              </div>
+              <p class="testimonial__text">
+                "Migramos da portaria física para a portaria remota da Max e a
+                economia foi imediata. Além da redução de custo, o nível de
+                controle que temos hoje sobre quem entra e sai do condomínio é
+                incomparável ao que tínhamos antes."
+              </p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar">RC</div>
+                <div>
+                  <p class="testimonial__name">Renata Costa</p>
+                  <p class="testimonial__role">
+                    Administradora — Condomínio Park Residences
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Depoimento 5 -->
+            <article class="testimonial testimonial--featured">
+              <div class="testimonial__rating" aria-label="5 estrelas">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+              </div>
+              <p class="testimonial__text">
+                "Tivemos uma tentativa de invasão registrada pelas câmeras às 3h
+                da manhã. A central da Max acionou a ronda motorizada e a
+                polícia antes mesmo de eu ver a notificação no celular. A
+                agilidade deles naquela noite me deu uma confiança que nenhum
+                sistema anterior havia dado."
+              </p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar">LM</div>
+                <div>
+                  <p class="testimonial__name">Leonardo Martins</p>
+                  <p class="testimonial__role">
+                    Empresário — Cliente há 3 anos
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Depoimento 6 -->
+            <article class="testimonial">
+              <div class="testimonial__rating" aria-label="5 estrelas">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+              </div>
+              <p class="testimonial__text">
+                "O aplicativo facilitou muito o dia a dia. Consigo liberar a
+                entrada de fornecedores e prestadores de serviço de qualquer
+                lugar, sem precisar deixar alguém responsável no local. Isso
+                sozinho já valeu o investimento."
+              </p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar">CA</div>
+                <div>
+                  <p class="testimonial__name">Camila Andrade</p>
+                  <p class="testimonial__role">
+                    Gerente Administrativa — Eskala
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- FAQ                                           -->
+      <!-- ============================================ -->
+      <section class="section faq-section" id="faq">
+        <div class="container">
+          <header class="section__header section__header--center">
+            <span class="eyebrow">
+              <span class="eyebrow__dot"></span>
+              Perguntas frequentes
+            </span>
+            <h2 class="section__title">
+              Tudo o que você precisa saber<br />antes de contratar
+            </h2>
+            <p class="section__lead">
+              Respostas diretas para as dúvidas mais comuns sobre a Max
+              Monitoramento. Não encontrou o que procurava? Fale com um
+              especialista.
+            </p>
+          </header>
+
+          <div class="faq">
+            <details class="faq-item" data-faq="portaria-remota">
+              <summary class="faq-item__summary">
+                Como funciona a portaria remota com IA?
+                <span class="faq-item__icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                  </svg>
+                </span>
+              </summary>
+              <div class="faq-item__content">
+                <p>
+                  A portaria remota substitui o porteiro físico por uma central
+                  de monitoramento operada 24 horas por equipe especializada.
+                  Câmeras de alta resolução, leitor facial, controle de acesso
+                  por aplicativo e inteligência artificial trabalham em conjunto
+                  para liberar moradores, visitantes autorizados e prestadores
+                  de serviço com agilidade e total segurança.
+                </p>
+                <p>
+                  Toda movimentação é registrada e auditada em tempo real, sem
+                  depender da atenção de uma única pessoa no local.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item" data-faq="reducao-custos">
+              <summary class="faq-item__summary">
+                Quanto posso economizar com a portaria remota?
+                <span class="faq-item__icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                  </svg>
+                </span>
+              </summary>
+              <div class="faq-item__content">
+                <p>
+                  Condomínios que migram para a portaria remota reduzem em média
+                  30% a 50% dos custos fixos com folha de pagamento, encargos
+                  trabalhistas, férias, 13º e benefícios. O retorno do
+                  investimento normalmente acontece nos primeiros 12 meses.
+                </p>
+                <p>
+                  Solicite um diagnóstico gratuito e nossa equipe apresenta uma
+                  simulação personalizada para o seu condomínio.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item" data-faq="seguranca">
+              <summary class="faq-item__summary">
+                E se a internet ou energia cair?
+                <span class="faq-item__icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                  </svg>
+                </span>
+              </summary>
+              <div class="faq-item__content">
+                <p>
+                  Todos os sistemas operam com redundância: nobreak, geradores,
+                  links de internet redundantes e comunicação 4G de backup. A
+                  central de monitoramento conta com infraestrutura espelhada,
+                  garantindo operação contínua mesmo em situações adversas.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item" data-faq="atendimento">
+              <summary class="faq-item__summary">
+                Qual o tempo de resposta em caso de emergência?
+                <span class="faq-item__icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                  </svg>
+                </span>
+              </summary>
+              <div class="faq-item__content">
+                <p>
+                  Nosso tempo médio de resposta para emergências é inferior a 60
+                  segundos. Em ocorrências graves, acionamos imediatamente a
+                  equipe tática móvel, autoridades competentes e responsáveis
+                  cadastrados, garantindo a atuação mais rápida possível.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item" data-faq="instalacao">
+              <summary class="faq-item__summary">
+                Quanto tempo leva para instalar todo o sistema?
+                <span class="faq-item__icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                  </svg>
+                </span>
+              </summary>
+              <div class="faq-item__content">
+                <p>
+                  O prazo médio entre aprovação do projeto e ativação do
+                  monitoramento é de 7 a 15 dias úteis, dependendo do porte do
+                  condomínio e da infraestrutura existente. Toda a instalação é
+                  feita pela nossa equipe técnica certificada Intelbras, sem
+                  terceirização.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item" data-faq="aplicativo">
+              <summary class="faq-item__summary">
+                Tem aplicativo para os moradores?
+                <span class="faq-item__icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                  </svg>
+                </span>
+              </summary>
+              <div class="faq-item__content">
+                <p>
+                  Sim. O aplicativo Max permite ao morador autorizar visitantes,
+                  acompanhar entregas, abrir o portão remotamente, visualizar
+                  câmeras, acionar pânico e receber notificações em tempo real.
+                  Disponível para iOS e Android, com atualizações constantes.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item" data-faq="contrato">
+              <summary class="faq-item__summary">
+                Qual o prazo mínimo de contrato?
+                <span class="faq-item__icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                  </svg>
+                </span>
+              </summary>
+              <div class="faq-item__content">
+                <p>
+                  Trabalhamos com contratos flexíveis a partir de 12 meses, com
+                  condições especiais para 24 e 36 meses. A proposta é
+                  personalizada de acordo com a complexidade do projeto,
+                  infraestrutura necessária e nível de serviço escolhido.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- FINAL CTA                                     -->
+      <!-- ============================================ -->
+      <section class="section cta-final" id="contato">
+        <div class="cta-final__backdrop" aria-hidden="true">
+          <div class="cta-final__glow"></div>
+          <div class="cta-final__hex"></div>
+        </div>
+        <div class="container">
+          <div class="cta-final__content">
+            <span class="eyebrow eyebrow--light">
+              <span class="eyebrow__dot"></span>
+              Fale com um especialista
+            </span>
+            <h2 class="cta-final__title">
+              Pronto para elevar a
+              <span class="text-gradient-light">segurança</span> do seu
+              condomínio?
+            </h2>
+            <p class="cta-final__subtitle">
+              Solicite um diagnóstico gratuito. Em até 24 horas, um especialista
+              entra em contato com uma proposta sob medida.
+            </p>
+
+            <form class="cta-form" id="ctaForm" novalidate>
+              <div class="cta-form__row">
+                <div class="cta-form__field">
+                  <label for="name">Nome completo</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Como podemos te chamar?"
+                    required
+                  />
+                </div>
+                <div class="cta-form__field">
+                  <label for="phone">WhatsApp</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="(11) 99999-9999"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="cta-form__row">
+                <div class="cta-form__field">
+                  <label for="email">E-mail</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="voce@exemplo.com.br"
+                    required
+                  />
+                </div>
+                <div class="cta-form__field">
+                  <label for="type">Tipo de imóvel</label>
+                  <select id="type" name="type" required>
+                    <option value="">Selecione</option>
+                    <option value="condominio">Condomínio</option>
+                    <option value="residencia">Residência</option>
+                    <option value="empresa">Empresa</option>
+                    <option value="outro">Outro</option>
+                  </select>
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="btn btn--primary btn--lg btn--full"
+                data-cta="form-submit"
+              >
+                Solicitar diagnóstico gratuito
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </button>
+              <p class="cta-form__notice">
+                Seus dados estão protegidos. Não enviamos spam.
+              </p>
+            </form>
+
+            <div class="cta-final__trust">
+              <div class="cta-final__trust-item">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Resposta em até 24h
+              </div>
+              <div class="cta-final__trust-item">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Diagnóstico gratuito
+              </div>
+              <div class="cta-final__trust-item">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Sem compromisso
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <div class="logo logo--light">
+              <div class="logo__mark" aria-hidden="true">
+                <img
+                  src="images/logo.png"
+                  alt="Max Monitoramento Logo"
+                  style="
+                    height: 56px;
+                    width: auto;
+                    display: block;
+                    filter: brightness(0) invert(1);
+                  "
+                />
+              </div>
+              <div class="logo__text">
+                <span class="logo__name">MAX</span>
+                <span class="logo__sub">Monitoramento</span>
+              </div>
+            </div>
+            <div class="footer__social">
+              <a href="#" aria-label="Instagram">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+              </a>
+              <a href="#" aria-label="Facebook">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  />
+                </svg>
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <a href="#" aria-label="YouTube">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"
+                  />
+                  <polygon
+                    points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__title">Serviços</h4>
+            <ul>
+              <li><a href="#servicos">Portaria Remota</a></li>
+              <li><a href="#servicos">Câmeras de Monitoramento</a></li>
+              <li><a href="#servicos">Alarme 24h</a></li>
+              <li><a href="#servicos">Smart Lockers</a></li>
+              <li><a href="#servicos">Terceirização</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__title">Empresa</h4>
+            <ul>
+              <li><a href="#sobre">Sobre nós</a></li>
+              <li><a href="#clientes">Clientes</a></li>
+              <li><a href="#depoimentos">Depoimentos</a></li>
+              <li><a href="#contato">Contato</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__title">Contato</h4>
+            <ul class="footer__contact">
+              <li>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+                <a href="tel:+551130000000">(11) 3000-0000</a>
+              </li>
+              <li>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <a href="mailto:contato@maxmonitoramento.com.br"
+                  >contato@maxmonitoramento.com.br</a
+                >
+              </li>
+              <li>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span>São Paulo — SP</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>
+            © <span data-year>2026</span> Max Monitoramento. Todos os direitos
+            reservados.
+          </p>
+          <div class="footer__bottom-links">
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a
+      href="#contato"
+      class="whatsapp-float"
+      aria-label="Fale conosco no WhatsApp"
+      data-cta="whatsapp-float"
+    >
+      <svg
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"
+        />
+      </svg>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/tintim.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/counters.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

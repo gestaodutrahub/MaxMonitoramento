@@ -1,0 +1,336 @@
+/* ============================================
+   BASE — Reset, Typography, Utilities
+   ============================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background: var(--color-bg);
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  color: var(--color-text);
+  background: var(--color-bg);
+  overflow-x: hidden;
+  max-width: 100vw;
+  min-height: 100vh;
+  font-feature-settings: "ss01", "cv11";
+  position: relative;
+}
+
+/* Background texture — gentle, fixed, only visible on plain bg areas */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: var(--bg-texture);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+img,
+picture,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* SVG: never explode width, but respect explicit sizing from attributes/CSS */
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+  letter-spacing: var(--tracking-tight);
+}
+
+h1 {
+  letter-spacing: var(--tracking-tighter);
+}
+
+p {
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-secondary);
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #ffffff;
+}
+
+/* ---- Custom scrollbar — refined ---- */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: 999px;
+  border: 2px solid var(--color-bg);
+  transition: background var(--duration-base) var(--ease-out);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* ============================================
+   LAYOUT — Container, Section
+   ============================================ */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.container--narrow {
+  max-width: 920px;
+}
+
+.section {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
+  position: relative;
+}
+
+.section--compact {
+  padding-top: clamp(3rem, 6vw, 4.5rem);
+  padding-bottom: clamp(3rem, 6vw, 4.5rem);
+}
+
+.section__header {
+  max-width: 760px;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.section__header--center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section__header--compact {
+  margin-bottom: 2.5rem;
+}
+
+.section__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-accent);
+  margin-bottom: 1.25rem;
+  padding: 6px 12px;
+  background: var(--gradient-primary-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+}
+
+.section__eyebrow::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(30, 111, 217, 0.2);
+}
+
+.section__title {
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-extrabold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tighter);
+  margin-bottom: 1.25rem;
+  color: var(--color-text);
+}
+
+.section__title--sm {
+  font-size: var(--fs-3xl);
+}
+
+.section__title--light {
+  color: #ffffff;
+}
+
+.section__lead {
+  font-size: var(--fs-md);
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  font-weight: var(--fw-regular);
+  max-width: 60ch;
+}
+
+.section__header--center .section__lead {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section__lead--light {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.section__text {
+  font-size: var(--fs-base);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+
+/* ============================================
+   TEXT UTILITIES
+   ============================================ */
+
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline;
+}
+
+.text-gradient--display {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline;
+}
+
+.text-gradient-light {
+  background: linear-gradient(135deg, #6fa8e8 0%, #b8d4f0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline;
+}
+
+.text-underline {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.text-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.05em;
+  height: 0.18em;
+  background: var(--gradient-primary);
+  opacity: 0.25;
+  border-radius: 2px;
+  z-index: -1;
+}
+
+.text-danger {
+  color: var(--color-danger);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* ============================================
+   GLOBAL BACKGROUND TEXTURE — subtle grid
+   ============================================ */
+.bg-grid {
+  position: relative;
+}
+
+.bg-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.7),
+    transparent 70%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.7),
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-grid > * {
+  position: relative;
+  z-index: 1;
+}

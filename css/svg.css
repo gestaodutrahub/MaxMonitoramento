@@ -1,0 +1,385 @@
+/* ============================================================
+   SVG SIZING — FINAL ENFORCEMENT
+   Loads LAST. Locks every icon size by container.
+   ============================================================ */
+
+/* Global safety net — never let svg flow wider than container */
+svg {
+  display: inline-block !important;
+  flex-shrink: 0 !important;
+  max-width: 100%;
+}
+
+/* Logo restores 100% in its own container */
+.logo__mark svg {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ============================================================
+   HEADER + NAV
+   ============================================================ */
+.theme-toggle svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+.menu-toggle svg {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn svg {
+  width: 14px !important;
+  height: 14px !important;
+}
+.btn--sm svg {
+  width: 12px !important;
+  height: 12px !important;
+}
+.btn--lg svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero__scroll svg {
+  width: 14px !important;
+  height: 14px !important;
+}
+.floating-card__icon svg {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+/* ============================================================
+   BADGES / EYEBROWS / GENERIC ICONS
+   ============================================================ */
+.badge svg {
+  width: 14px !important;
+  height: 14px !important;
+}
+.cert-badge__icon svg {
+  width: 22px !important;
+  height: 22px !important;
+}
+.icon-box svg {
+  width: 26px !important;
+  height: 26px !important;
+}
+.icon-box--lg svg {
+  width: 32px !important;
+  height: 32px !important;
+}
+
+/* ============================================================
+   INTELBRAS FEATURE BANNER
+   ============================================================ */
+.intelbras-feature__badge {
+  width: 80px !important;
+  height: 80px !important;
+  flex-shrink: 0;
+}
+.intelbras-feature__badge svg {
+  width: 38px !important;
+  height: 38px !important;
+}
+
+/* ============================================================
+   PROBLEM
+   ============================================================ */
+.problem__list-icon {
+  width: 36px !important;
+  height: 36px !important;
+  flex-shrink: 0;
+}
+.problem__list-icon svg {
+  width: 20px !important;
+  height: 20px !important;
+}
+.problem__media-badge svg {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+/* ============================================================
+   BENEFITS
+   ============================================================ */
+.benefit-card__icon {
+  width: 56px !important;
+  height: 56px !important;
+  flex-shrink: 0;
+}
+.benefit-card__icon svg {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+/* ============================================================
+   ABOUT — generic SVG safety
+   ============================================================ */
+.about .btn svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+/* ============================================================
+   SERVICES + CLOUD CAMERA
+   ============================================================ */
+.service__features li svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+.service__visual {
+  overflow: hidden;
+}
+.service__visual .placeholder {
+  min-height: 280px;
+}
+.service__visual .placeholder > svg {
+  width: 48px !important;
+  height: 48px !important;
+}
+.service__content .btn svg {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.cloud-camera-wrap {
+  display: grid !important;
+  grid-template-columns: 2fr 1fr !important;
+  gap: 1rem !important;
+  height: 100%;
+  min-height: 380px;
+}
+.cloud-camera-wrap__main {
+  min-height: 380px;
+  overflow: hidden;
+  border-radius: var(--radius-2xl);
+}
+.cloud-camera-wrap__main .placeholder {
+  min-height: 380px !important;
+  height: 100%;
+}
+.cloud-camera-wrap__main .placeholder > svg {
+  width: 56px !important;
+  height: 56px !important;
+}
+.cloud-camera-wrap__side {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem;
+  min-height: 380px;
+}
+.cloud-mini-card {
+  flex: 1 1 0 !important;
+  min-height: 0;
+  min-width: 0;
+  padding: 1.25rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  overflow: hidden;
+}
+.cloud-mini-card svg {
+  width: 32px !important;
+  height: 32px !important;
+}
+.cloud-mini-card span {
+  font-size: 0.75rem !important;
+  text-align: center;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+/* ============================================================
+   CHANNELS GRID
+   ============================================================ */
+.channels-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 0.5rem !important;
+}
+.channel-tag {
+  min-width: 0;
+}
+
+/* ============================================================
+   APPS — new structure
+   ============================================================ */
+.app-feature__icon {
+  width: 44px !important;
+  height: 44px !important;
+  flex-shrink: 0;
+}
+.app-feature__icon svg {
+  width: 20px !important;
+  height: 20px !important;
+}
+.app-tile {
+  flex-shrink: 0;
+}
+.app-tile svg {
+  width: 44px !important;
+  height: 44px !important;
+}
+.store-badge-premium__icon svg {
+  width: 30px !important;
+  height: 30px !important;
+}
+.menu-tile__icon svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+/* ============================================================
+   PROCESS, INVEST
+   ============================================================ */
+.process-step__hex {
+  width: 72px !important;
+  height: 82px !important;
+  flex-shrink: 0;
+}
+.invest-card svg {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+/* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+.testimonial__rating {
+  display: flex;
+  gap: 4px;
+}
+.testimonial__rating svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+.testimonial__avatar {
+  width: 44px !important;
+  height: 44px !important;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq-item__icon {
+  width: 32px !important;
+  height: 32px !important;
+  flex-shrink: 0;
+}
+.faq-item__icon svg {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+/* ============================================================
+   CTA FINAL + FORM
+   ============================================================ */
+.cta-final__trust-item svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+.form-success__icon {
+  width: 64px !important;
+  height: 64px !important;
+  flex-shrink: 0;
+}
+.form-success__icon svg {
+  width: 32px !important;
+  height: 32px !important;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer__social a {
+  width: 40px !important;
+  height: 40px !important;
+  flex-shrink: 0;
+}
+.footer__social svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+.footer__contact svg {
+  width: 16px !important;
+  height: 16px !important;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   FLOATING WHATSAPP
+   ============================================================ */
+.whatsapp-float {
+  width: 58px !important;
+  height: 58px !important;
+}
+.whatsapp-float svg {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+/* ============================================================
+   PLACEHOLDERS GENERIC
+   ============================================================ */
+.placeholder > svg {
+  width: 48px !important;
+  height: 48px !important;
+}
+.placeholder--video > svg {
+  width: 48px !important;
+  height: 48px !important;
+}
+
+/* ============================================================
+   APPS UNIFIED — SVG sizing
+   ============================================================ */
+.apps-unified__icon svg {
+  width: 24px !important;
+  height: 24px !important;
+}
+.apps-unified__features li svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+.store-badge-premium__icon svg {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+/* Tablet internals */
+.tablet-btn svg {
+  width: 12px !important;
+  height: 12px !important;
+}
+.status-card__icon svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+.qa-btn svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+.menu-tile__icon svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+/* Hero social buttons */
+.btn-icon svg {
+  width: 24px !important;
+  height: 24px !important;
+}
+.equipment-card__badge svg {
+  width: 22px !important;
+  height: 22px !important;
+}
