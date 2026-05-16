@@ -62,18 +62,17 @@
 }
 
 .logo__mark {
-  width: auto;
-  height: auto;
+  width: 74px;
+  height: 74px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  color: var(--color-accent);
+  transition: transform var(--duration-base) var(--ease-out);
 }
 
 .logo__mark img {
-  height: 68px !important;
-  width: auto !important;
-  display: block;
+  height: 55px !important;
 }
 
 .logo:hover .logo__mark {
@@ -119,11 +118,8 @@
    HEADER — premium glassmorphism
    ============================================ */
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
+  position: relative;
+  top: auto;
   z-index: var(--z-fixed);
   background: var(--color-surface-translucent);
   backdrop-filter: saturate(180%) blur(20px);
@@ -834,6 +830,96 @@
    WHATSAPP FLOATING BUTTON
    ============================================ */
 
+.floating-actions {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: var(--z-floating);
+}
+
+.floating-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  position: relative;
+  transition:
+    transform var(--duration-base) var(--ease-spring),
+    box-shadow var(--duration-base) var(--ease-out);
+  text-decoration: none;
+}
+
+.floating-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: ping 2.5s ease-out infinite;
+  pointer-events: none;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.floating-btn--whatsapp {
+  background: #25d366;
+  box-shadow:
+    0 8px 24px rgba(37, 211, 102, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  animation: float-in 1s var(--ease-spring) 1s both;
+}
+
+.floating-btn--whatsapp::before {
+  border: 2px solid #25d366;
+}
+
+.floating-btn--whatsapp:hover {
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.55);
+}
+
+.floating-btn--instagram {
+  background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  box-shadow:
+    0 8px 24px rgba(225, 48, 108, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  animation: float-in 1s var(--ease-spring) 1.2s both;
+}
+
+.floating-btn--instagram::before {
+  border: 2px solid #fd1d1d;
+  animation-delay: 0.5s;
+}
+
+.floating-btn--instagram:hover {
+  box-shadow: 0 12px 32px rgba(225, 48, 108, 0.55);
+}
+
+/* Mobile sizing */
+@media (max-width: 640px) {
+  .floating-actions {
+    bottom: 16px;
+    right: 16px;
+    gap: 10px;
+  }
+  .floating-btn {
+    width: 50px;
+    height: 50px;
+  }
+  .floating-btn svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+}
+
+/* Legacy support — keep whatsapp-float class working if used elsewhere */
 .whatsapp-float {
   position: fixed;
   bottom: 24px;
@@ -1073,4 +1159,80 @@ body.user-is-tabbing *:focus {
 
 body:not(.user-is-tabbing) *:focus {
   outline: none;
+}
+
+/* ============================================
+   HEADER — flexível (não-fixo, rola com a página)
+   ============================================ */
+.header {
+  position: relative;
+  top: auto;
+}
+
+/* ============================================
+   LOGO — tamanho aumentado
+   ============================================ */
+.logo__mark {
+  width: 72px;
+  height: 72px;
+}
+
+.logo__mark img {
+  height: 48px !important;
+}
+
+.footer__brand .logo__mark {
+  width: 88px;
+  height: 88px;
+}
+
+.footer__brand .logo__mark img {
+  height: 64px !important;
+}
+
+@media (max-width: 640px) {
+  .logo__mark {
+    width: 60px;
+    height: 60px;
+  }
+  .logo__mark img {
+    height: 40px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo__mark {
+    width: 54px;
+    height: 54px;
+  }
+  .logo__mark img {
+    height: 36px !important;
+  }
+}
+
+/* ============================================
+   FORM — botão inline ao lado do select
+   ============================================ */
+.cta-form__row--service {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: end;
+}
+
+.cta-form__submit-inline {
+  height: 52px;
+  white-space: nowrap;
+  align-self: end;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .cta-form__row--service {
+    grid-template-columns: 1fr;
+  }
+  .cta-form__submit-inline {
+    width: 100%;
+    justify-content: center;
+  }
 }

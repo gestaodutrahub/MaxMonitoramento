@@ -1,0 +1,1292 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <script>
+      (function () {
+        try {
+          var s = localStorage.getItem("max-theme");
+          var p = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var t = s || (p ? "dark" : "light");
+          document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+    <title>Blog | Max Monitoramento — Insights de segurança eletrônica</title>
+    <meta
+      name="description"
+      content="Conheça as últimas tendências, dicas e tecnologias em segurança eletrônica, portaria remota e monitoramento 24h."
+    />
+    <meta name="theme-color" content="#0A2540" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/variables.css?v=3" />
+    <link rel="stylesheet" href="css/base.css?v=3" />
+    <link rel="stylesheet" href="css/components.css?v=3" />
+    <link rel="stylesheet" href="css/sections.css?v=3" />
+    <link rel="stylesheet" href="css/animations.css?v=3" />
+    <link rel="stylesheet" href="css/responsive.css?v=3" />
+    <link rel="stylesheet" href="css/blog.css?v=3" />
+    <link rel="stylesheet" href="css/svg-sizing.css?v=3" />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="container header__container">
+        <a
+          href="index.html"
+          class="header__logo"
+          aria-label="Max Monitoramento"
+        >
+          <div class="logo">
+            <div class="logo__mark" aria-hidden="true">
+              <img
+                src="images/logo.png"
+                alt="Max Monitoramento Logo"
+                style="height: 36px; width: auto; display: block"
+              />
+            </div>
+          </div>
+        </a>
+        <nav class="nav" aria-label="Principal">
+          <ul class="nav__list">
+            <li><a href="index.html#sobre" class="nav__link">Sobre</a></li>
+            <li>
+              <a href="index.html#servicos" class="nav__link">Serviços</a>
+            </li>
+            <li><a href="index.html#aplicativos" class="nav__link">Apps</a></li>
+            <li>
+              <a href="index.html#depoimentos" class="nav__link">Depoimentos</a>
+            </li>
+            <li>
+              <a
+                href="blog.html"
+                class="nav__link nav__link--active"
+                aria-current="page"
+                >Blog</a
+              >
+            </li>
+            <li><a href="index.html#faq" class="nav__link">FAQ</a></li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Alternar tema"
+            type="button"
+          >
+            <svg
+              class="theme-toggle__sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+              />
+            </svg>
+            <svg
+              class="theme-toggle__moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </button>
+          <a
+            href="index.html#contato"
+            class="btn btn--primary btn--sm"
+            data-cta="header-cta"
+            >Fale com um especialista
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </a>
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <ul class="mobile-menu__list">
+          <li><a href="index.html#sobre">Sobre</a></li>
+          <li><a href="index.html#servicos">Serviços</a></li>
+          <li><a href="index.html#aplicativos">Apps</a></li>
+          <li><a href="index.html#processo">Como funciona</a></li>
+          <li><a href="index.html#depoimentos">Depoimentos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li>
+            <a href="index.html#contato" class="btn btn--primary btn--full"
+              >Fale com um especialista</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="blog-hero">
+        <div class="blog-hero__backdrop" aria-hidden="true">
+          <div class="blog-hero__glow blog-hero__glow--1"></div>
+          <div class="blog-hero__glow blog-hero__glow--2"></div>
+        </div>
+        <div class="container">
+          <div class="blog-hero__content">
+            <span class="eyebrow"
+              ><span class="eyebrow__dot"></span>Blog Max Monitoramento</span
+            >
+            <h1 class="blog-hero__title">
+              Conteúdo, tecnologia e
+              <span class="text-gradient">segurança</span> em um só lugar.
+            </h1>
+            <p class="blog-hero__lead">
+              Acompanhe as últimas tendências, dicas práticas e novidades sobre
+              segurança eletrônica, portaria remota e monitoramento inteligente.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="blog-section">
+        <div class="container">
+          <div class="blog-grid" id="blogGrid">
+            <article class="blog-card" data-post="analitico-video">
+              <button
+                class="blog-card__trigger"
+                type="button"
+                aria-expanded="false"
+                aria-controls="post-analitico-video"
+              >
+                <div class="blog-card__media">
+                  <img
+                    src="images/Blog/Card1.webp"
+                    alt="Analítico de vídeo"
+                    loading="lazy"
+                    class="blog-card__image"
+                  />
+                </div>
+                <div class="blog-card__body">
+                  <h2 class="blog-card__title">
+                    Analítico de vídeo: entenda o que é e como funciona
+                  </h2>
+                  <p class="blog-card__excerpt">
+                    Analíticos de vídeo ajudam a detectar comportamentos
+                    considerados suspeitos de forma automatizada usando
+                    inteligência artificial.
+                  </p>
+                  <span class="blog-card__cta"
+                    ><span class="blog-card__cta-text">Ler mais</span
+                    ><svg
+                      class="blog-card__cta-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="6 9 12 15 18 9" /></svg
+                  ></span>
+                </div>
+              </button>
+              <div
+                class="blog-card__expansion"
+                id="post-analitico-video"
+                role="region"
+                aria-hidden="true"
+              >
+                <div class="blog-card__expansion-inner">
+                  <div class="blog-content">
+                    <p>
+                      Em um sistema de
+                      <strong>CFTV (Circuito Fechado de Televisão)</strong>, uma
+                      câmera de videomonitoramento (VMS) que apenas registra as
+                      imagens em tempo real pode não ser mais suficiente para
+                      fazer a segurança de um ambiente.
+                    </p>
+                    <p>
+                      Quando elaboram projetos de segurança, empresas e
+                      condomínios já pensam em implantar
+                      <strong>inteligência artificial (IA)</strong> no sistema
+                      de monitoramento. Isso significa ter câmeras IP (digitais)
+                      e softwares com os chamados
+                      <strong>analíticos de vídeo</strong>.
+                    </p>
+                    <h3>O que é analítico de vídeo?</h3>
+                    <p>
+                      Analítico de vídeo é uma parte do sistema de
+                      videomonitoramento (VMS) que analisa as imagens e detecta,
+                      automaticamente, situações suspeitas ou eventos fora do
+                      padrão de comportamento.
+                    </p>
+                    <p>O sistema pode ser utilizado para:</p>
+                    <ul>
+                      <li>
+                        <strong>Detecção de pessoas</strong> em áreas restritas
+                        — se alguém é flagrado cruzando uma linha desenhada pelo
+                        sistema, um alerta é gerado;
+                      </li>
+                      <li>
+                        <strong>Identificação facial</strong> de pessoas
+                        específicas (autorizadas ou suspeitas);
+                      </li>
+                      <li>
+                        <strong>Detecção de objetos abandonados</strong> ou
+                        removidos do ambiente;
+                      </li>
+                      <li>
+                        <strong>Análise de trajetória</strong> e tempo de
+                        permanência em determinadas áreas;
+                      </li>
+                      <li>
+                        <strong>Alarme de temperatura</strong> e detecção de
+                        comportamentos suspeitos.
+                      </li>
+                    </ul>
+                    <h3>Por que escolher análise inteligente de vídeo?</h3>
+                    <p>
+                      Um dos pontos fortes da análise inteligente de vídeo é
+                      que, independentemente da quantidade de câmeras, o sistema
+                      avalia as imagens <strong>em tempo real</strong>,
+                      trabalhando de forma autônoma sem depender totalmente dos
+                      operadores da central de segurança.
+                    </p>
+                    <p>
+                      Assim que o sistema detecta um evento — como a invasão de
+                      uma área controlada — ele
+                      <strong
+                        >envia imediatamente um alerta de ocorrência</strong
+                      >
+                      à operação. Depois disso, a equipe de segurança pode atuar
+                      no caso com agilidade.
+                    </p>
+                    <p>
+                      É possível configurar uma série de analíticos de vídeo.
+                      Cada um pode detectar e identificar eventos diferentes
+                      durante <strong>24 horas por dia</strong>, garantindo
+                      proteção contínua e inteligente do seu patrimônio.
+                    </p>
+                  </div>
+                  <button
+                    class="blog-card__close"
+                    type="button"
+                    data-close="analitico-video"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <line x1="18" y1="6" x2="6" y2="18" />
+                      <line x1="6" y1="6" x2="18" y2="18" /></svg
+                    >Fechar artigo
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="blog-card" data-post="perfil-vigilante">
+              <button
+                class="blog-card__trigger"
+                type="button"
+                aria-expanded="false"
+                aria-controls="post-perfil-vigilante"
+              >
+                <div class="blog-card__media blog-card__media--alt">
+                  <img
+                    src="images/blog/Card2.jpg"
+                    alt="Perfil do vigilante"
+                    loading="lazy"
+                    class="blog-card__image"
+                  />
+                </div>
+                <div class="blog-card__body">
+                  <h2 class="blog-card__title">
+                    Qual o perfil que um vigilante deve ter?
+                  </h2>
+                  <p class="blog-card__excerpt">
+                    Mesmo com todas as tecnologias disponíveis para garantir a
+                    segurança de estabelecimentos, o suporte humano ainda é
+                    fundamental.
+                  </p>
+                  <span class="blog-card__cta"
+                    ><span class="blog-card__cta-text">Ler mais</span
+                    ><svg
+                      class="blog-card__cta-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="6 9 12 15 18 9" /></svg
+                  ></span>
+                </div>
+              </button>
+              <div
+                class="blog-card__expansion"
+                id="post-perfil-vigilante"
+                role="region"
+                aria-hidden="true"
+              >
+                <div class="blog-card__expansion-inner">
+                  <div class="blog-content">
+                    <p>
+                      Mesmo com todas as tecnologias disponíveis para garantir a
+                      segurança de estabelecimentos — câmeras inteligentes,
+                      alarmes, controle de acesso —, o
+                      <strong>suporte humano qualificado</strong> ainda é uma
+                      peça essencial no sistema de proteção.
+                    </p>
+                    <h3>O que faz um bom vigilante?</h3>
+                    <p>
+                      Um vigilante profissional precisa muito mais do que apenas
+                      presença física. Ele precisa combinar características
+                      técnicas, comportamentais e emocionais para desempenhar a
+                      função com excelência.
+                    </p>
+                    <h3>
+                      Principais características de um vigilante qualificado:
+                    </h3>
+                    <ul>
+                      <li>
+                        <strong>Atenção redobrada</strong> — capacidade de
+                        observar detalhes e reagir rapidamente a situações fora
+                        do padrão;
+                      </li>
+                      <li>
+                        <strong>Comunicação clara</strong> — saber se expressar
+                        bem com moradores, visitantes, polícia e equipe;
+                      </li>
+                      <li>
+                        <strong>Equilíbrio emocional</strong> — manter a calma
+                        em situações de alta pressão;
+                      </li>
+                      <li>
+                        <strong>Postura profissional</strong> — boa
+                        apresentação, pontualidade e seriedade no trabalho;
+                      </li>
+                      <li>
+                        <strong>Conhecimento técnico</strong> — domínio de
+                        equipamentos de segurança e protocolos de emergência;
+                      </li>
+                      <li>
+                        <strong>Empatia e cordialidade</strong> — saber tratar
+                        moradores e visitantes com respeito.
+                      </li>
+                    </ul>
+                    <h3>Formação e capacitação contínua</h3>
+                    <p>
+                      Todo vigilante deve possuir o
+                      <strong>Curso de Formação de Vigilantes</strong>
+                      reconhecido pela Polícia Federal, além de fazer
+                      reciclagens periódicas. Empresas sérias investem em
+                      treinamento contínuo, simulações e capacitação tecnológica
+                      para que sua equipe esteja sempre preparada.
+                    </p>
+                    <p>
+                      Na Max Monitoramento, todos os profissionais passam por
+                      <strong>processos rigorosos de seleção</strong>,
+                      treinamento técnico e avaliação psicológica antes de atuar
+                      em campo — garantindo que a sua segurança esteja sempre
+                      nas mãos certas.
+                    </p>
+                  </div>
+                  <button
+                    class="blog-card__close"
+                    type="button"
+                    data-close="perfil-vigilante"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <line x1="18" y1="6" x2="6" y2="18" />
+                      <line x1="6" y1="6" x2="18" y2="18" /></svg
+                    >Fechar artigo
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="blog-card" data-post="prevencao-eletronica">
+              <button
+                class="blog-card__trigger"
+                type="button"
+                aria-expanded="false"
+                aria-controls="post-prevencao-eletronica"
+              >
+                <div class="blog-card__media blog-card__media--green">
+                  <img
+                    src="images/Blog/Card3.png"
+                    alt="Prevenção em segurança eletrônica"
+                    loading="lazy"
+                    class="blog-card__image"
+                  />
+                </div>
+                <div class="blog-card__body">
+                  <h2 class="blog-card__title">
+                    A importância da prevenção na segurança eletrônica
+                  </h2>
+                  <p class="blog-card__excerpt">
+                    A prevenção é um fator essencial para a segurança
+                    eletrônica. Muita gente confunde prevenção com proteção, mas
+                    elas têm papéis distintos.
+                  </p>
+                  <span class="blog-card__cta"
+                    ><span class="blog-card__cta-text">Ler mais</span
+                    ><svg
+                      class="blog-card__cta-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="6 9 12 15 18 9" /></svg
+                  ></span>
+                </div>
+              </button>
+              <div
+                class="blog-card__expansion"
+                id="post-prevencao-eletronica"
+                role="region"
+                aria-hidden="true"
+              >
+                <div class="blog-card__expansion-inner">
+                  <div class="blog-content">
+                    <p>
+                      A <strong>prevenção</strong> é um fator essencial para a
+                      segurança eletrônica. Muita gente confunde prevenção com
+                      proteção, como se fossem a mesma coisa — mas elas têm
+                      papéis bem distintos no sistema de segurança.
+                    </p>
+                    <h3>Qual a diferença entre prevenção e proteção?</h3>
+                    <p>
+                      <strong>Prevenção</strong> é tudo o que é feito
+                      <strong>antes</strong> de uma ocorrência acontecer. É
+                      evitar que o problema ocorra. Já
+                      <strong>proteção</strong> é a resposta a um evento que já
+                      está em curso — é o que protege durante e depois.
+                    </p>
+                    <p>
+                      Os dois conceitos andam juntos, mas a prevenção é o que
+                      reduz drasticamente os riscos.
+                    </p>
+                    <h3>Como a prevenção funciona na segurança eletrônica?</h3>
+                    <ul>
+                      <li>
+                        <strong>Visibilidade ostensiva</strong> — câmeras
+                        visíveis e bem posicionadas inibem ações criminosas;
+                      </li>
+                      <li>
+                        <strong>Análise comportamental</strong> — IA detecta
+                        comportamentos suspeitos antes mesmo do evento ocorrer;
+                      </li>
+                      <li>
+                        <strong>Controle de acesso rigoroso</strong> — barreiras
+                        eletrônicas impedem entrada não autorizada;
+                      </li>
+                      <li>
+                        <strong>Manutenção preventiva</strong> — equipamentos
+                        sempre operacionais evitam falhas no momento crítico;
+                      </li>
+                      <li>
+                        <strong>Iluminação inteligente</strong> — sensores de
+                        presença iluminam áreas de risco automaticamente;
+                      </li>
+                      <li>
+                        <strong>Auditoria contínua</strong> — análise de padrões
+                        para identificar vulnerabilidades.
+                      </li>
+                    </ul>
+                    <h3>Por que investir em prevenção?</h3>
+                    <p>
+                      Investir em prevenção é
+                      <strong>muito mais barato</strong> do que lidar com as
+                      consequências de um incidente. Os custos com prevenção
+                      representam apenas uma fração do prejuízo causado por uma
+                      invasão, furto ou dano material — sem contar o impacto
+                      psicológico que esses eventos causam.
+                    </p>
+                    <p>
+                      Um bom projeto de segurança eletrônica sempre
+                      <strong>prioriza a prevenção</strong>, combinada com
+                      sistemas reativos eficientes. Essa é a fórmula adotada
+                      pela Max Monitoramento para proteger mais de 15.000
+                      clientes em todo o Brasil.
+                    </p>
+                  </div>
+                  <button
+                    class="blog-card__close"
+                    type="button"
+                    data-close="prevencao-eletronica"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <line x1="18" y1="6" x2="6" y2="18" />
+                      <line x1="6" y1="6" x2="18" y2="18" /></svg
+                    >Fechar artigo
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="blog-card" data-post="portaria-remota-vantagens">
+              <button
+                class="blog-card__trigger"
+                type="button"
+                aria-expanded="false"
+                aria-controls="post-portaria-remota-vantagens"
+              >
+                <div class="blog-card__media blog-card__media--purple">
+                  <img
+                    src="images/Blog/Card4.jpg"
+                    alt="Portaria remota"
+                    loading="lazy"
+                    class="blog-card__image"
+                  />
+                </div>
+                <div class="blog-card__body">
+                  <h2 class="blog-card__title">
+                    Portaria remota: vantagens reais para o seu condomínio
+                  </h2>
+                  <p class="blog-card__excerpt">
+                    A portaria remota vem substituindo a portaria tradicional.
+                    Entenda os benefícios práticos para moradores e síndicos.
+                  </p>
+                  <span class="blog-card__cta"
+                    ><span class="blog-card__cta-text">Ler mais</span
+                    ><svg
+                      class="blog-card__cta-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="6 9 12 15 18 9" /></svg
+                  ></span>
+                </div>
+              </button>
+              <div
+                class="blog-card__expansion"
+                id="post-portaria-remota-vantagens"
+                role="region"
+                aria-hidden="true"
+              >
+                <div class="blog-card__expansion-inner">
+                  <div class="blog-content">
+                    <p>
+                      A <strong>portaria remota</strong> já é uma realidade em
+                      milhares de condomínios brasileiros. Substituindo a
+                      portaria tradicional, ela combina tecnologia, eficiência
+                      operacional e segurança em níveis superiores.
+                    </p>
+                    <h3>Como funciona a portaria remota?</h3>
+                    <p>
+                      Em vez de ter um porteiro físico 24h no condomínio, toda a
+                      operação é gerenciada por uma
+                      <strong>central de monitoramento especializada</strong>,
+                      conectada por câmeras de alta definição, interfones IP,
+                      leitores faciais e biométricos.
+                    </p>
+                    <p>
+                      Operadores treinados acompanham a portaria em tempo real,
+                      validam visitantes, liberam acessos e respondem a
+                      emergências — com toda movimentação registrada e
+                      auditável.
+                    </p>
+                    <h3>Vantagens reais para o seu condomínio:</h3>
+                    <ul>
+                      <li>
+                        <strong>Redução de custos de 30% a 50%</strong> —
+                        economia em folha de pagamento, encargos, férias e
+                        benefícios;
+                      </li>
+                      <li>
+                        <strong>Maior segurança</strong> — eliminação do risco
+                        de rendição do porteiro físico;
+                      </li>
+                      <li>
+                        <strong>Operação 24h</strong> sem falhas humanas como
+                        sono, distração ou problemas pessoais;
+                      </li>
+                      <li>
+                        <strong>Auditoria completa</strong> — todos acessos
+                        ficam registrados com imagem, horário e identificação;
+                      </li>
+                      <li>
+                        <strong>Tecnologia integrada</strong> — controle por
+                        app, biometria, reconhecimento facial e QR Code;
+                      </li>
+                      <li>
+                        <strong>Atendimento padronizado</strong> — operadores
+                        treinados seguem protocolos rigorosos.
+                      </li>
+                    </ul>
+                    <h3>O que diz a lei sobre portaria remota?</h3>
+                    <p>
+                      A portaria remota é <strong>totalmente legal</strong> no
+                      Brasil e segue normas da ABESE (Associação Brasileira das
+                      Empresas de Sistemas Eletrônicos de Segurança). Os
+                      condomínios podem migrar gradualmente, e a aprovação
+                      geralmente ocorre em assembleia de moradores.
+                    </p>
+                    <p>
+                      Se o seu condomínio ainda usa portaria tradicional, vale a
+                      pena fazer uma simulação. A Max Monitoramento oferece
+                      <strong>diagnóstico gratuito</strong> e proposta
+                      personalizada — em alguns casos o retorno do investimento
+                      acontece nos primeiros 12 meses.
+                    </p>
+                  </div>
+                  <button
+                    class="blog-card__close"
+                    type="button"
+                    data-close="portaria-remota-vantagens"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <line x1="18" y1="6" x2="6" y2="18" />
+                      <line x1="6" y1="6" x2="18" y2="18" /></svg
+                    >Fechar artigo
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="blog-card" data-post="alarme-monitorado">
+              <button
+                class="blog-card__trigger"
+                type="button"
+                aria-expanded="false"
+                aria-controls="post-alarme-monitorado"
+              >
+                <div class="blog-card__media blog-card__media--orange">
+                  <img
+                    src="images/Blog/Card5.jpeg"
+                    alt="Alarme monitorado"
+                    loading="lazy"
+                    class="blog-card__image"
+                  />
+                </div>
+                <div class="blog-card__body">
+                  <h2 class="blog-card__title">
+                    Alarme monitorado vs alarme comum: qual a diferença?
+                  </h2>
+                  <p class="blog-card__excerpt">
+                    Entenda por que um alarme monitorado por uma central
+                    especializada é muito mais eficaz que um alarme comum.
+                  </p>
+                  <span class="blog-card__cta"
+                    ><span class="blog-card__cta-text">Ler mais</span
+                    ><svg
+                      class="blog-card__cta-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="6 9 12 15 18 9" /></svg
+                  ></span>
+                </div>
+              </button>
+              <div
+                class="blog-card__expansion"
+                id="post-alarme-monitorado"
+                role="region"
+                aria-hidden="true"
+              >
+                <div class="blog-card__expansion-inner">
+                  <div class="blog-content">
+                    <p>
+                      Muita gente acha que ter um alarme em casa ou na empresa é
+                      suficiente para garantir a segurança — mas a verdade é que
+                      existe uma <strong>diferença enorme</strong> entre um
+                      alarme comum e um alarme monitorado por uma central
+                      especializada.
+                    </p>
+                    <h3>Alarme comum (sem monitoramento)</h3>
+                    <p>
+                      É aquele alarme que apenas dispara uma sirene quando algum
+                      sensor é ativado. Toda a responsabilidade recai sobre você
+                      ou seus vizinhos — alguém precisa ouvir, identificar a
+                      situação e chamar a polícia.
+                    </p>
+                    <p><strong>Problemas comuns:</strong></p>
+                    <ul>
+                      <li>Falsos disparos sem resposta organizada;</li>
+                      <li>
+                        Ninguém presta atenção em alarmes que disparam
+                        frequentemente;
+                      </li>
+                      <li>Sem registro de eventos ou histórico;</li>
+                      <li>Sem suporte técnico imediato em caso de falha;</li>
+                      <li>Você precisa estar disponível 24h para reagir.</li>
+                    </ul>
+                    <h3>Alarme monitorado (com central 24h)</h3>
+                    <p>
+                      Quando o alarme dispara, o sinal é enviado
+                      <strong
+                        >imediatamente para uma central de monitoramento</strong
+                      >
+                      que opera 24 horas. Operadores treinados acessam câmeras
+                      em tempo real, identificam o tipo de ocorrência e tomam as
+                      providências cabíveis.
+                    </p>
+                    <p><strong>Vantagens:</strong></p>
+                    <ul>
+                      <li>
+                        <strong>Resposta em menos de 60 segundos</strong> em
+                        emergências;
+                      </li>
+                      <li>
+                        <strong>Acionamento automático da polícia</strong> em
+                        casos de intrusão confirmada;
+                      </li>
+                      <li>
+                        <strong>Ronda motorizada</strong> enviada para verificar
+                        in loco;
+                      </li>
+                      <li>
+                        <strong>Histórico completo</strong> de todos os eventos
+                        com data, hora e imagens;
+                      </li>
+                      <li>
+                        <strong>Manutenção preventiva</strong> e suporte técnico
+                        permanente;
+                      </li>
+                      <li>
+                        <strong>App exclusivo</strong> com pânico, status do
+                        sistema e acesso a câmeras.
+                      </li>
+                    </ul>
+                    <h3>Vale a pena o investimento?</h3>
+                    <p>
+                      Considerando o valor do que está sendo protegido — sua
+                      casa, sua família, seu patrimônio — o investimento em um
+                      alarme monitorado é
+                      <strong>extremamente acessível</strong>. A mensalidade
+                      costuma ser menor do que uma conta de streaming, e oferece
+                      em troca a tranquilidade de saber que profissionais estão
+                      atentos 24h por dia.
+                    </p>
+                  </div>
+                  <button
+                    class="blog-card__close"
+                    type="button"
+                    data-close="alarme-monitorado"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <line x1="18" y1="6" x2="6" y2="18" />
+                      <line x1="6" y1="6" x2="18" y2="18" /></svg
+                    >Fechar artigo
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="blog-card" data-post="lgpd-monitoramento">
+              <button
+                class="blog-card__trigger"
+                type="button"
+                aria-expanded="false"
+                aria-controls="post-lgpd-monitoramento"
+              >
+                <div class="blog-card__media blog-card__media--teal">
+                  <img
+                    src="images/Blog/Card6.jpg"
+                    alt="LGPD e monitoramento"
+                    loading="lazy"
+                    class="blog-card__image"
+                  />
+                </div>
+                <div class="blog-card__body">
+                  <h2 class="blog-card__title">
+                    LGPD e monitoramento: o que você precisa saber
+                  </h2>
+                  <p class="blog-card__excerpt">
+                    A Lei Geral de Proteção de Dados impacta diretamente o uso
+                    de câmeras em condomínios e empresas. Entenda como adequar.
+                  </p>
+                  <span class="blog-card__cta"
+                    ><span class="blog-card__cta-text">Ler mais</span
+                    ><svg
+                      class="blog-card__cta-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="6 9 12 15 18 9" /></svg
+                  ></span>
+                </div>
+              </button>
+              <div
+                class="blog-card__expansion"
+                id="post-lgpd-monitoramento"
+                role="region"
+                aria-hidden="true"
+              >
+                <div class="blog-card__expansion-inner">
+                  <div class="blog-content">
+                    <p>
+                      A <strong>Lei Geral de Proteção de Dados (LGPD)</strong>,
+                      que entrou em vigor em 2020, trouxe regras claras sobre o
+                      tratamento de dados pessoais — incluindo o uso de câmeras
+                      de monitoramento em condomínios, empresas e espaços
+                      públicos.
+                    </p>
+                    <h3>O que mudou para quem usa câmeras?</h3>
+                    <p>
+                      As imagens captadas por câmeras de segurança são
+                      consideradas <strong>dados pessoais</strong> pela LGPD,
+                      especialmente quando permitem identificar pessoas. Isso
+                      significa que o uso desses sistemas precisa seguir
+                      princípios de transparência, finalidade legítima e
+                      proporcionalidade.
+                    </p>
+                    <h3>O que é obrigatório:</h3>
+                    <ul>
+                      <li>
+                        <strong>Avisos visíveis</strong> informando que o local
+                        é monitorado por câmeras;
+                      </li>
+                      <li>
+                        <strong>Finalidade clara</strong> — só pode usar câmeras
+                        para fins legítimos (segurança, principalmente);
+                      </li>
+                      <li>
+                        <strong>Acesso restrito</strong> às gravações — apenas
+                        pessoas autorizadas;
+                      </li>
+                      <li>
+                        <strong>Tempo de retenção limitado</strong> — não pode
+                        guardar gravações indefinidamente;
+                      </li>
+                      <li>
+                        <strong>Segurança técnica</strong> — armazenamento
+                        criptografado e protegido contra acessos não
+                        autorizados;
+                      </li>
+                      <li>
+                        <strong>Política de privacidade</strong> documentada e
+                        acessível.
+                      </li>
+                    </ul>
+                    <h3>O que NÃO pode fazer:</h3>
+                    <ul>
+                      <li>
+                        Câmeras em áreas privadas (banheiros, vestiários,
+                        interior de apartamentos);
+                      </li>
+                      <li>
+                        Compartilhar imagens em redes sociais sem autorização;
+                      </li>
+                      <li>
+                        Usar reconhecimento facial sem base legal específica;
+                      </li>
+                      <li>Guardar gravações por tempo indeterminado.</li>
+                    </ul>
+                    <h3>Como a Max Monitoramento garante conformidade?</h3>
+                    <p>
+                      Todos os nossos sistemas são
+                      <strong>100% adequados à LGPD</strong>. Trabalhamos com:
+                    </p>
+                    <ul>
+                      <li>
+                        Armazenamento criptografado em servidores próprios;
+                      </li>
+                      <li>Acesso restrito por níveis de permissão;</li>
+                      <li>Política de retenção configurável por cliente;</li>
+                      <li>Logs de auditoria para todos os acessos;</li>
+                      <li>
+                        Treinamento contínuo da equipe em compliance e
+                        privacidade.
+                      </li>
+                    </ul>
+                    <p>
+                      Investir em segurança eletrônica não pode significar abrir
+                      mão da privacidade — pelo contrário, o equilíbrio entre
+                      proteção e respeito aos dados pessoais é o que faz a
+                      diferença entre uma empresa séria e amadora.
+                    </p>
+                  </div>
+                  <button
+                    class="blog-card__close"
+                    type="button"
+                    data-close="lgpd-monitoramento"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <line x1="18" y1="6" x2="6" y2="18" />
+                      <line x1="6" y1="6" x2="18" y2="18" /></svg
+                    >Fechar artigo
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="blog-newsletter">
+            <div class="blog-newsletter__icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </div>
+            <div class="blog-newsletter__content">
+              <h3 class="blog-newsletter__title">Receba conteúdo exclusivo</h3>
+              <p class="blog-newsletter__desc">
+                Cadastre-se e receba novos artigos sobre segurança eletrônica
+                direto no seu e-mail.
+              </p>
+            </div>
+            <a
+              href="index.html#contato"
+              class="btn btn--primary"
+              data-cta="blog-newsletter"
+              >Quero receber<svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M13 5l7 7-7 7" /></svg
+            ></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <div class="logo logo--light">
+              <div class="logo__mark" aria-hidden="true">
+                <img
+                  src="images/logo.png"
+                  alt="Max Monitoramento Logo"
+                  style="height: 36px; width: auto; display: block"
+                />
+              </div>
+            </div>
+            <p class="footer__desc">
+              Segurança eletrônica de ponta para condomínios, residências e
+              empresas. Inteligência humana + IA para proteger o que importa.
+            </p>
+            <!-- <div class="footer__social">
+              <a href="#" aria-label="Instagram"
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg
+              ></a>
+              <a href="#" aria-label="Facebook"
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  /></svg
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" /></svg
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"
+                  />
+                  <polygon
+                    points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"
+                  /></svg
+              ></a>
+            </div> -->
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__title">Serviços</h4>
+            <ul>
+              <li><a href="index.html#servicos">Portaria Remota</a></li>
+              <li>
+                <a href="index.html#servicos">Câmeras de Monitoramento</a>
+              </li>
+              <li><a href="index.html#servicos">Alarme 24h</a></li>
+              <li><a href="index.html#servicos">Smart Lockers</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__title">Empresa</h4>
+            <ul>
+              <li><a href="index.html#sobre">Sobre nós</a></li>
+              <li><a href="index.html#clientes">Clientes</a></li>
+              <li><a href="index.html#depoimentos">Depoimentos</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__title">Contato</h4>
+            <ul class="footer__contact">
+              <li>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  /></svg
+                ><a href="tel:+551122333400">(11) 2233-3400</a>
+              </li>
+              <li>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" /></svg
+                ><a href="mailto:sac@grupomax.net">sac@grupomax.net</a>
+              </li>
+              <li>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" /></svg
+                ><span>São Paulo — SP</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>
+            © <span data-year>2026</span> Max Monitoramento. Todos os direitos
+            reservados.
+          </p>
+          <div class="footer__bottom-links">
+            <a href="#">Política de Privacidade</a><a href="#">Termos de Uso</a>
+          </div>
+          <p class="footer__credit">
+            Site desenvolvido por
+            <a
+              href="https://dutrahub.com.br"
+              target="_blank"
+              rel="noopener"
+              class="footer__credit-link"
+              ><strong>Dutra Hub</strong></a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+    <div class="floating-actions" aria-label="Contatos rápidos">
+      <a
+        href="https://www.instagram.com/maxmonitoramento"
+        target="_blank"
+        rel="noopener"
+        class="floating-btn floating-btn--instagram"
+        aria-label="Siga-nos no Instagram"
+      >
+        <svg
+          width="26"
+          height="26"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+        </svg>
+      </a>
+      <a
+        href="https://wa.me/551122333400?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Max%20Monitoramento"
+        target="_blank"
+        rel="noopener"
+        class="floating-btn floating-btn--whatsapp"
+        aria-label="Fale conosco no WhatsApp"
+      >
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"
+          />
+        </svg>
+      </a>
+    </div>
+    <script src="js/tintim.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/blog.js"></script>
+  </body>
+</html>

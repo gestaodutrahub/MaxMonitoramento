@@ -1,7 +1,7 @@
 /**
  * form.js
  * CTA form handling: validation, Brazilian phone mask, submission,
- * success state, and Tintim event tracking (no PII).
+ * mailto redirect with structured content, success state, and Tintim tracking.
  */
 
 (function () {
@@ -12,10 +12,14 @@
   const form = document.getElementById("ctaForm");
   if (!form) return;
 
+  // Email destination — change here if needed
+  const DESTINATION_EMAIL = "sac@grupomax.net";
+
   const nameField = form.querySelector('[name="name"]');
   const phoneField = form.querySelector('[name="phone"]');
   const emailField = form.querySelector('[name="email"]');
   const typeField = form.querySelector('[name="type"]');
+  const serviceField = form.querySelector('[name="service"]');
   const submitBtn = form.querySelector('button[type="submit"]');
 
   // ============================================================
@@ -39,7 +43,6 @@
       const oldLength = e.target.value.length;
       e.target.value = maskPhone(e.target.value);
       const newLength = e.target.value.length;
-      // Adjust cursor position when adding mask characters
       try {
         e.target.setSelectionRange(
           cursorPos + (newLength - oldLength),
@@ -56,7 +59,7 @@
   // ============================================================
   // FIELD-LEVEL FOCUS TRACKING
   // ============================================================
-  [nameField, emailField, typeField].forEach((field) => {
+  [nameField, emailField, typeField, serviceField].forEach((field) => {
     if (!field) return;
     field.addEventListener("focus", () => {
       Tintim.track("form_field_focus", { field: field.name });
@@ -98,11 +101,13 @@
     if (errorEl) errorEl.textContent = "";
   }
 
-  [nameField, phoneField, emailField, typeField].forEach((field) => {
-    if (!field) return;
-    field.addEventListener("input", () => clearError(field));
-    field.addEventListener("change", () => clearError(field));
-  });
+  [nameField, phoneField, emailField, typeField, serviceField].forEach(
+    (field) => {
+      if (!field) return;
+      field.addEventListener("input", () => clearError(field));
+      field.addEventListener("change", () => clearError(field));
+    },
+  );
 
   function validateForm() {
     let valid = true;
@@ -144,11 +149,66 @@
       }
     }
 
+    if (serviceField) {
+      if (!serviceField.value) {
+        setError(serviceField, "Selecione o serviço desejado");
+        valid = false;
+      } else {
+        clearError(serviceField);
+      }
+    }
+
     return valid;
   }
 
   // ============================================================
-  // SUBMISSION
+  // BUILD STRUCTURED EMAIL BODY
+  // ============================================================
+  function buildEmailContent() {
+    const name = nameField ? nameField.value.trim() : "";
+    const phone = phoneField ? phoneField.value.trim() : "";
+    const email = emailField ? emailField.value.trim() : "";
+    const propertyType = typeField ? typeField.value : "";
+    const service = serviceField ? serviceField.value : "";
+
+    const subject = `Solicitação de diagnóstico gratuito — ${service || "Max Monitoramento"}`;
+
+    const body = `Olá, equipe Max Monitoramento!
+
+Gostaria de solicitar um diagnóstico gratuito para minha necessidade de segurança.
+
+═══════════════════════════════════════
+DADOS DE CONTATO
+═══════════════════════════════════════
+
+- Nome completo: ${name}
+- WhatsApp: ${phone}
+- E-mail: ${email}
+
+═══════════════════════════════════════
+DETALHES DA SOLICITAÇÃO
+═══════════════════════════════════════
+
+- Tipo de imóvel: ${propertyType}
+- Serviço desejado: ${service}
+
+═══════════════════════════════════════
+
+Aguardo o contato de um especialista para apresentação da proposta e orientações sobre o próximo passo.
+
+Atenciosamente,
+${name}
+
+──────────────────────────────────────
+Mensagem enviada pelo site Max Monitoramento
+maxmonitoramento.com.br
+──────────────────────────────────────`;
+
+    return { subject, body };
+  }
+
+  // ============================================================
+  // SUCCESS STATE
   // ============================================================
   function showSuccessState() {
     const successHTML = `
@@ -158,14 +218,17 @@
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
         </div>
-        <h3 class="form-success__title">Solicitação enviada!</h3>
-        <p class="form-success__text">Em breve nossa equipe entrará em contato pelo WhatsApp para apresentar a solução ideal para o seu condomínio.</p>
+        <h3 class="form-success__title">Solicitação preparada!</h3>
+        <p class="form-success__text">Abrimos seu cliente de e-mail com a mensagem pronta. Basta clicar em <strong>Enviar</strong> para que nossa equipe receba sua solicitação e entre em contato em breve.</p>
       </div>
     `;
     form.innerHTML = successHTML;
     form.classList.add("is-success");
   }
 
+  // ============================================================
+  // SUBMISSION — opens mailto with structured content
+  // ============================================================
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -175,6 +238,7 @@
         hasPhone: !!(phoneField && isValidPhone(phoneField.value)),
         hasEmail: !!(emailField && isValidEmail(emailField.value)),
         hasType: !!(typeField && typeField.value),
+        hasService: !!(serviceField && serviceField.value),
       });
       return;
     }
@@ -185,24 +249,34 @@
       submitBtn.classList.add("is-loading");
       const original = submitBtn.textContent;
       submitBtn.dataset.original = original;
-      submitBtn.textContent = "Enviando...";
     }
 
-    // Track submission — NO raw PII
+    // Track submission — no raw PII
     Tintim.track("form_submit", {
       type: typeField ? typeField.value : null,
+      service: serviceField ? serviceField.value : null,
       hasName: !!(nameField && nameField.value.trim()),
       hasEmail: !!(emailField && emailField.value.trim()),
       hasPhone: !!(phoneField && phoneField.value.trim()),
       location: "cta_final",
     });
 
-    // Simulate async submission. Replace with real endpoint as needed.
+    // Build mailto link
+    const { subject, body } = buildEmailContent();
+    const mailtoLink = `mailto:${DESTINATION_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Open the user's email client
     setTimeout(() => {
-      showSuccessState();
-      Tintim.track("form_success", {
-        type: typeField ? typeField.value : null,
-      });
-    }, 900);
+      window.location.href = mailtoLink;
+
+      // Show success state shortly after
+      setTimeout(() => {
+        showSuccessState();
+        Tintim.track("form_success", {
+          type: typeField ? typeField.value : null,
+          service: serviceField ? serviceField.value : null,
+        });
+      }, 500);
+    }, 300);
   });
 })();
