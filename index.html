@@ -40,7 +40,7 @@
     <meta name="theme-color" content="#0A2540" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/Logo.png" />
+    <link rel="icon" type="image/png" href="images/LogoSombra.png" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -110,7 +110,7 @@
           <div class="logo">
             <div class="logo__mark" aria-hidden="true">
               <img
-                src="images/Logo.png"
+                src="images/LogoSombra.png"
                 alt="Max Monitoramento Logo"
                 style="height: 36px; width: auto; display: block"
               />
@@ -126,6 +126,7 @@
           <ul class="nav__list">
             <li><a href="#sobre" class="nav__link">Sobre</a></li>
             <li><a href="#servicos" class="nav__link">Serviços</a></li>
+            <li><a href="#locacao" class="nav__link">Locação</a></li>
             <li><a href="#aplicativos" class="nav__link">Apps</a></li>
             <li><a href="#depoimentos" class="nav__link">Depoimentos</a></li>
             <li><a href="blog.html" class="nav__link">Blog</a></li>
@@ -204,6 +205,7 @@
         <ul class="mobile-menu__list">
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#locacao">Locação</a></li>
           <li><a href="#aplicativos">Apps</a></li>
           <li><a href="#processo">Como funciona</a></li>
           <li><a href="#depoimentos">Depoimentos</a></li>
@@ -342,16 +344,19 @@
                 />
               </div>
               <div class="client-logo">
-                <img src="images/Eskala.png" alt="Eskala" loading="lazy" />
+                <img src="images/ZooSP.png" alt="Zoo SP" loading="lazy" />
               </div>
               <div class="client-logo">
-                <img src="images/Cadplast.png" alt="CADPLAST" loading="lazy" />
+                <img
+                  src="images/JardimBotanicoSP.png"
+                  alt="JardimBotanico"
+                  loading="lazy"
+                />
               </div>
               <div class="client-logo">
                 <img
                   src="images/Colegio.png"
                   alt="Colégio Oriana SOOR"
-
                   loading="lazy"
                 />
               </div>
@@ -383,10 +388,10 @@
                 <img src="images/SulAmerica.png" alt="" loading="lazy" />
               </div>
               <div class="client-logo" aria-hidden="true">
-                <img src="images/Eskala.png" alt="" loading="lazy" />
+                <img src="images/ZooSP.png" alt="" loading="lazy" />
               </div>
               <div class="client-logo" aria-hidden="true">
-                <img src="images/Cadplast.png" alt="" loading="lazy" />
+                <img src="images/JardimBotanicoSP.png" alt="" loading="lazy" />
               </div>
               <div class="client-logo" aria-hidden="true">
                 <img src="images/Colegio.png" alt="" loading="lazy" />
@@ -437,10 +442,13 @@
                 fabricante.
               </p>
             </div>
-            <div class="intelbras-feature__stamp" aria-hidden="true">
-              <small>Parceiro credenciado</small>
-              <span>INTELBRAS</span>
-            </div>
+           <div class="intelbras-feature__image">
+  <img
+    src="images/IntelbrasVerde.png"
+    alt="Selo de parceiro credenciado Intelbras"
+    loading="lazy"
+  />
+</div>
           </div>
 
           <!-- Certifications strip -->
@@ -615,7 +623,7 @@
             <div class="problem__media">
               <div class="problem__media-frame">
                 <img
-                  src="images/segurança.png"
+                  src="images/FacialIntelbras.png"
                   alt="Cenário real de segurança"
                   loading="lazy"
                 />
@@ -799,7 +807,7 @@
               <article class="equipment-card">
                 <div class="equipment-card__media">
                   <img
-                    src="images/equipamento1.png"
+                    src="images/Camera2Intelbras.png"
                     alt="Câmera de monitoramento Intelbras"
                     loading="lazy"
                   />
@@ -832,7 +840,7 @@
               <article class="equipment-card">
                 <div class="equipment-card__media">
                   <img
-                    src="images/equipamento3.png"
+                    src="images/AlarmeIntelbras.jpg"
                     alt="Central de alarme monitorada"
                     loading="lazy"
                   />
@@ -862,7 +870,7 @@
               <article class="equipment-card">
                 <div class="equipment-card__media">
                   <img
-                    src="images/equipamento2.png"
+                    src="images/CamerasIntelbras.png"
                     alt="Controle de acesso e portaria remota"
                     loading="lazy"
                   />
@@ -1072,7 +1080,7 @@
                     >
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    Liberação por app, QR code ou interfone
+                    Liberação por app, QR code, tags ou interfone
                   </li>
                   <li>
                     <svg
@@ -1100,7 +1108,7 @@
               </div>
               <div class="service__visual">
                 <div class="placeholder placeholder--service">
-                  <img src="images/portaria.png" alt="Portaria Remota com IA" />
+                  <img src="images/AcessoIntelbras.jpg" alt="Portaria Remota com IA" />
                 </div>
               </div>
             </article>
@@ -1222,7 +1230,7 @@
               </div>
               <div class="service__visual">
                 <div class="placeholder placeholder--service">
-                  <img src="images/Cameras.png" alt="Câmera HD + DVR" />
+                  <img src="images/CamerasCanais.webp" alt="Câmera HD + DVR" />
                 </div>
               </div>
             </article>
@@ -1307,82 +1315,296 @@
 
             <!-- Service 4 -->
             <article class="service service--alt">
-              <div class="service__content">
-                <div class="service__tag">04</div>
-                <h3 class="service__title">
-                  Smart Lockers &amp; controle de acesso
-                </h3>
-                <p class="service__desc">
-                  Armários eletrônicos para recebimento de encomendas com total
-                  segurança e sem contato físico — ideal para a rotina moderna
-                  dos moradores. Integração total com o app da Max.
-                </p>
-                <ul class="service__features">
-                  <li>
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    Liberação por código único
-                  </li>
-                  <li>
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    Notificação automática ao morador
-                  </li>
-                  <li>
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    Histórico completo de entregas
-                  </li>
-                </ul>
-                <a
-                  href="#contato"
-                  class="btn btn--ghost"
-                  data-cta="service-lockers"
-                  >Saiba mais</a
-                >
-              </div>
-              <div class="service__visual">
-                <div class="placeholder placeholder--service">
-                  <img src="images/Cameras2.png" alt="Smart Lockers" />
-                </div>
-              </div>
-            </article>
+  <div class="service__content">
+    <div class="service__tag">04</div>
+    <h3 class="service__title">
+      Terceirização de serviços
+    </h3>
+    <p class="service__desc">
+      Em parceria com a <strong>Maxpremier</strong>, fornecemos mão de obra
+      especializada para o seu condomínio ou empresa — equipe treinada,
+      uniformizada e gerida com os mesmos padrões de qualidade da Max
+      Monitoramento.
+    </p>
+    <ul class="service__features">
+      <li>
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <polyline points="20 6 9 17 4 12" />
+        </svg>
+        Portaria e controle de acesso
+      </li>
+      <li>
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <polyline points="20 6 9 17 4 12" />
+        </svg>
+        Limpeza e sanitização de ambientes
+      </li>
+      <li>
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <polyline points="20 6 9 17 4 12" />
+        </svg>
+        Zeladoria com profissionais qualificados
+      </li>
+    </ul>
+  </div>
+  <div class="service__visual">
+    <div class="placeholder placeholder--service">
+      <img src="images/Faxina.png" alt="Terceirização de serviços" />
+    </div>
+  </div>
+</article>
           </div>
         </div>
       </section>
+
+      <!-- ============================================ -->
+<!-- LOCAÇÃO E COMODATO                            -->
+<!-- ============================================ -->
+<section class="section leasing" id="locacao">
+  <div class="container">
+    <header class="section__header section__header--center">
+      <span class="eyebrow">
+        <span class="eyebrow__dot"></span>
+        Modelos de contratação
+      </span>
+      <h2 class="section__title">
+        Locação e comodato de
+        <span class="text-gradient">equipamentos</span>.
+      </h2>
+      <p class="section__lead">
+        Sua empresa precisa de equipamentos de segurança de ponta sem
+        comprometer o capital de giro? Além da venda, oferecemos
+        <strong>locação e comodato</strong> com manutenção preventiva e
+        corretiva já inclusas — sem surpresas, sem custos extras.
+      </p>
+    </header>
+
+    <div class="leasing__grid">
+      <!-- Locação -->
+      <article class="leasing-card">
+        <div class="leasing-card__icon" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="12" y1="1" x2="12" y2="23" />
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+          </svg>
+        </div>
+        <span class="leasing-card__tag">Locação</span>
+        <h3 class="leasing-card__title">Invista zero em equipamentos</h3>
+        <p class="leasing-card__desc">
+          Você paga uma mensalidade fixa e recebe tecnologia de alto nível
+          com fluxo de caixa previsível.
+        </p>
+        <ul class="leasing-card__list">
+          <li>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Câmeras, centrais e sensores de última geração
+          </li>
+          <li>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Manutenção preventiva programada
+          </li>
+          <li>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Suporte técnico contínuo
+          </li>
+          <li>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Equipamento sempre atualizado
+          </li>
+        </ul>
+      </article>
+
+      <!-- Comodato -->
+      <article class="leasing-card leasing-card--featured">
+        <div class="leasing-card__icon" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+            <path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+          </svg>
+        </div>
+        <span class="leasing-card__tag">Comodato</span>
+        <h3 class="leasing-card__title">Proteção sem investimento inicial</h3>
+        <p class="leasing-card__desc">
+          Os equipamentos são cedidos sem custo mediante contrato de
+          monitoramento de longo prazo.
+        </p>
+        <ul class="leasing-card__list">
+          <li>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Manutenção 100% coberta — preventiva + corretiva
+          </li>
+          <li>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Garantia de 90 dias em todos os serviços
+          </li>
+          <li>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Sem custos de reposição em caso de defeito
+          </li>
+          <li>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Vistoria técnica gratuita para dimensionamento correto
+          </li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- Tudo incluso -->
+    <div class="leasing-included">
+      <div class="leasing-included__header">
+        <h3 class="leasing-included__title">
+          Tudo <span class="text-gradient">incluso</span>
+        </h3>
+        <p class="leasing-included__lead">
+          Independente do modelo escolhido, você conta com cobertura completa.
+        </p>
+      </div>
+      <div class="leasing-included__grid">
+        <div class="leasing-included__item">
+          <div class="leasing-included__num">01</div>
+          <p>Manutenção preventiva programada</p>
+        </div>
+        <div class="leasing-included__item">
+          <div class="leasing-included__num">02</div>
+          <p>Manutenção corretiva com prazo de 1 dia útil</p>
+        </div>
+        <div class="leasing-included__item">
+          <div class="leasing-included__num">03</div>
+          <p>Garantia de 90 dias sobre serviços</p>
+        </div>
+        <div class="leasing-included__item">
+          <div class="leasing-included__num">04</div>
+          <p>Vistoria técnica para dimensionamento dos equipamentos</p>
+        </div>
+      </div>
+      </a>
+    </div>
+  </div>
+</section>
 
       <!-- ============================================ -->
       <!-- APPS SECTION                                  -->
@@ -2190,7 +2412,7 @@
                 <div>
                   <p class="testimonial__name">Camila Andrade</p>
                   <p class="testimonial__role">
-                    Gerente Administrativa — Eskala
+                    Gerente Administrativa — Jardim Botânico
                   </p>
                 </div>
               </div>
@@ -2611,7 +2833,7 @@
               <div class="logo logo--light">
                 <div class="logo__mark" aria-hidden="true">
                   <img
-                    src="images/Logo.png"
+                    src="images/LogoSombra.png"
                     alt="Max Monitoramento Logo"
                     style="height: 36px; width: auto; display: block"
                   />

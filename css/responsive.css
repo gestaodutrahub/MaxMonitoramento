@@ -349,33 +349,66 @@ canvas {
     font-size: clamp(1.5rem, 5vw, 2rem);
   }
 
-  .intelbras-feature {
-    padding: 1.5rem 1rem;
-    gap: 1.25rem;
+  /* ============================================================
+   INTELBRAS FEATURE — ajustes de responsividade
+   ============================================================ */
+  @media (max-width: 992px) {
+    .intelbras-feature {
+      grid-template-columns: 1fr !important;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      gap: 1.5rem;
+      justify-items: center;
+    }
+    .intelbras-feature__content {
+      align-items: center;
+    }
+    .intelbras-feature__desc {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .intelbras-feature__image {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+    .intelbras-feature__image img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius-xl);
+      display: block;
+    }
   }
-  .intelbras-feature__left {
-    flex-direction: column;
+
+  @media (max-width: 640px) {
+    .intelbras-feature {
+      padding: 1.5rem 1.25rem;
+      gap: 1.25rem;
+    }
+    .intelbras-feature__badge {
+      width: 64px;
+      height: 64px;
+    }
+    .intelbras-feature__badge svg {
+      width: 30px;
+      height: 30px;
+    }
+    .intelbras-feature__title {
+      font-size: 1.1rem;
+      line-height: 1.3;
+    }
+    .intelbras-feature__desc {
+      font-size: 0.85rem;
+    }
+    .intelbras-feature__image {
+      max-width: 260px;
+    }
   }
-  .intelbras-feature__badge {
-    width: 72px;
-    height: 72px;
-  }
-  .intelbras-feature__title {
-    font-size: 1.1rem;
-    line-height: 1.3;
-  }
-  .intelbras-feature__desc {
-    font-size: 0.85rem;
-  }
-  .intelbras-feature__highlights {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.5rem;
-  }
-  .intelbras-highlight {
-    padding: 0.5rem 0.85rem;
-    font-size: 0.8rem;
-    justify-content: center;
+
+  @media (max-width: 360px) {
+    .intelbras-feature__image {
+      max-width: 100%;
+    }
   }
 
   .certifications {
