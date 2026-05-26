@@ -3003,3 +3003,156 @@
   letter-spacing: 0.02em;
   margin-top: 0.25rem;
 }
+
+/* ===== LOCAÇÃO E COMODATO ===== */
+.leasing__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  margin-bottom: 3.5rem;
+}
+
+.leasing-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.leasing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.leasing-card--featured {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-lg);
+}
+
+.leasing-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-primary-soft);
+  color: var(--color-accent);
+  margin-bottom: 1.25rem;
+}
+
+.leasing-card__icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.leasing-card__tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.leasing-card__title {
+  font-size: 1.35rem;
+  margin: 0.5rem 0 0.75rem;
+  color: var(--color-text);
+}
+
+.leasing-card__desc {
+  color: var(--color-text-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.leasing-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.leasing-card__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.leasing-card__list svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--color-accent);
+  margin-top: 2px;
+}
+
+/* Tudo incluso */
+.leasing-included {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  padding: 2.75rem;
+  text-align: center;
+}
+
+.leasing-included__title {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.leasing-included__lead {
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+}
+
+.leasing-included__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2.25rem;
+}
+
+.leasing-included__item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 1.5rem 1.25rem;
+  text-align: left;
+  box-shadow: var(--shadow-sm);
+}
+
+.leasing-included__num {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.leasing-included__item p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .leasing__grid,
+  .leasing-included__grid {
+    grid-template-columns: 1fr;
+  }
+  .leasing-included {
+    padding: 1.75rem;
+  }
+}
